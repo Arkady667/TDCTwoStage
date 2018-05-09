@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "ThermoTDL_tb_func_synth.vhd"
+vhdl xil_defaultlib  "../../../../TDCTwoStage.srcs/sources_1/new/TDC_pkg.vhd"
+vhdl xil_defaultlib  "../../../../TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd"
+vhdl xil_defaultlib  "../../../../TDCTwoStage.srcs/sim_1/new/VDL_tb.vhd"
+vhdl xil_defaultlib  "../../../../TDCTwoStage.srcs/sim_1/new/ThermoTDL_tb.vhd"
+vhdl xil_defaultlib  "../../../../TDCTwoStage.srcs/sim_1/new/ThermoVDL_tb.vhd"
+vhdl xil_defaultlib  "../../../../TDCTwoStage.srcs/sim_1/new/Mux_tb.vhd"
+vhdl xil_defaultlib  "../../../../TDCTwoStage.srcs/sim_1/new/TDL_tb.vhd"
+
+# Do not sort compile order
+nosort

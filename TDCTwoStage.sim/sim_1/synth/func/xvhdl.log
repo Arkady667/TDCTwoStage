@@ -1,0 +1,12 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.sim/sim_1/synth/func/ThermoTDL_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ThermoDecoderTDL
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TDC_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/VDL_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity VDL_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/ThermoTDL_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ThermoTDL_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/ThermoVDL_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/Mux_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDL_tb.vhd" into library xil_defaultlib
