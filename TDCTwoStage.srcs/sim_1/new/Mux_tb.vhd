@@ -43,24 +43,35 @@ architecture Behavioral of Mux_tb is
 	--PORTS
 	signal iMux :  matrix(0 to inputsNumber-2);
   	signal iSel :  std_logic_vector(inputsNumber-1 downto 0);
-  	signal oMux :  std_logic_vector(inputsWidth-1 downto 0)
+  	signal oMux :  std_logic_vector(1 downto 0);
 
 	--CLK
     signal Clk 			: std_logic;
     constant CLKPERIOD  : natural := 20;
 
-    procedure writeData (
-    		thermoCode 			  : out std_logic_vector(31 downto 0);
-    		constant numberOfOnes : integer := 0  -- MAX 32
-    	)
-    	is
-    		variable outputData : std_logic_vector(31 downto 0) := (others => '0');
+
+    procedure muxData (
+    	inputData : in matrix(0 to inputsNumber-2);
+    	inputSel : in std_logic_vector(inputsNumber-1 downto 0)    
+    ) 
+    is
     	begin
-    		for N in 0 to numberOfOnes-1 loop
-    			outputData(N) := '1';
-    		end loop;
-    		thermoCode := outputData;
-    end writeData;
+    		
+    end procedure muxData;
+
+    procedure timeInterval (
+    	inputData : out matrix(0 to inputsNumber-2);
+    	--startSignal : in std_logic;
+    	--stopSignal : in std_logic;
+    	constant TiInput : integer := 0
+    ) 
+    is
+    	begin
+    		inputData(TiInput)(0) <= '1';--startSignal;
+    		wait for 1 ns;
+    		inputData(TiInput)(1) <= '1';--stopSignal;
+
+    end procedure timeInterval;
     
 
 
@@ -69,8 +80,15 @@ begin
 	-- SIM PROCESS
 
 	P_MAIN: process
-  
+  			variable inputTI : matrix(0 to inputsNumber-2);
 		begin
+			iSel <= "11111000";
+			wait for 5 ns; 
+			timeInterval(inputTI,4);
+			iMux <= inputTI;
+			wait for 5 ns;
+			iSel <= "11100000";
+			
 
 
 	end process;
@@ -80,9 +98,9 @@ begin
 
 	I_DUT: entity xil_defaultlib.Mux_tb
 		port map(
-			iMux 	=> iMuxData,
-		    iSel 	=> oVDLData,
-		    oMux 	=> oMuxData
+			iMux 	=> iMux,
+		    iSel 	=> iSel,
+		    oMux 	=> oMux
 		);
 
 end Behavioral;

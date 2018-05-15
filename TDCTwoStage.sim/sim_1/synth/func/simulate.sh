@@ -9,4 +9,4 @@ then
 exit $RETVAL
 fi
 }
-ExecStep $xv_path/bin/xsim ThermoTDL_tb_func_synth -key {Post-Synthesis:sim_1:Functional:ThermoTDL_tb} -tclbatch ThermoTDL_tb.tcl -log simulate.log
+ExecStep $xv_path/bin/xsim TDC_tb_func_synth -key {Post-Synthesis:sim_1:Functional:TDC_tb} -tclbatch TDC_tb.tcl -log simulate.log

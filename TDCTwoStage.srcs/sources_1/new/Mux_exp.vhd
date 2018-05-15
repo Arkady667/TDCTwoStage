@@ -36,38 +36,82 @@ library xil_defaultlib;
 
 entity Mux_exp is
     port (
-     iMux : in matrix(0 to inputsNumber-2);
-     iSel : in std_logic_vector(inputsNumber-1 downto 0);
-     oMux : out std_logic_vector(inputsWidth-1 downto 0)
+     iMux : in std_logic_vector((2*VDL_LENGTH-3) downto 0) := (others => '0');
+     iSel : in std_logic_vector(VDL_LENGTH-1 downto 0);	
+     --iEN  : in std_logic;
+     oMux : out std_logic_vector(1 downto 0)
     );
 end Mux_exp;
 
 
 architecture Behavioral of Mux_exp is
 
-    --procedure writeData (
-    --		thermoCode 			  : out std_logic_vector(31 downto 0);
-    --		constant numberOfOnes : integer := 0  -- MAX 32
-    --	)
-    --	is
-    --		variable outputData : std_logic_vector(31 downto 0) := (others => '0');
-    --	begin
-    --		for N in 0 to numberOfOnes-1 loop
-    --			outputData(N) := '1';
-    --		end loop;
-    --		thermoCode := outputData;
-    --end writeData;
+
+	signal temp : std_logic_vector(1 downto 0);
+	signal SelWithEn  : std_logic_vector(VDL_LENGTH downto 0); 
+
+ --   procedure thermoCode (
+	--	sel 			  : out std_logic_vector(VDL_LENGTH-1 downto 0);
+	--	constant numberOfOnes : integer := 0  -- MAX 32
+	--)
+	--is
+	--	variable outputData : std_logic_vector(31 downto 0) := (others => '0');
+	--begin
+	--	for N in 0 to numberOfOnes-1 loop
+	--		outputData(N) := '1';
+	--	end loop;
+	--	sel := outputData;
+	--end thermoCode;
 
 begin
+	
 
-	with iSel select
-		oMux <= iMux(0) when "10000000",
-				iMux(1) when "11000000",
-				iMux(2) when "11100000",
-				iMux(3) when "11110000",
-				iMux(4) when "11111000",
-				iMux(5) when "11111100",
-				iMux(6) when "11111110",
+	--SelWithEn <= iEN & iSel;
+
+	with iSel select --SelWithEn
+		oMux <= iMux(1 downto 0)  	when "100000000000000000000000000000001",
+				iMux(3 downto 2) 	when "100000000000000000000000000000011",
+				iMux(5 downto 4) 	when "100000000000000000000000000000111",
+				iMux(7 downto 6) 	when "100000000000000000000000000001111",
+				iMux(9 downto 8) 	when "100000000000000000000000000011111",
+				iMux(11 downto 10) 	when "100000000000000000000000000111111",
+				iMux(13 downto 12)	when "100000000000000000000000001111111",
+				iMux(15 downto 14)	when "100000000000000000000000011111111",
+				iMux(17 downto 16)	when "100000000000000000000000111111111",
+				iMux(19 downto 18)	when "100000000000000000000001111111111",
+				iMux(21 downto 20)	when "100000000000000000000011111111111",
+				iMux(23 downto 22)	when "100000000000000000000111111111111",
+				iMux(25 downto 24)	when "100000000000000000001111111111111",
+				iMux(27 downto 26)	when "100000000000000000011111111111111",
+				iMux(29 downto 28)	when "100000000000000000111111111111111",
+				iMux(31 downto 30)	when "100000000000000001111111111111111",
+				iMux(33 downto 32)  when "100000000000000011111111111111111",
+				iMux(35 downto 34) 	when "100000000000000111111111111111111",
+				iMux(37 downto 36) 	when "100000000000001111111111111111111",
+				iMux(39 downto 38) 	when "100000000000011111111111111111111",
+				iMux(41 downto 40) 	when "100000000000111111111111111111111",
+				iMux(43 downto 42)	when "100000000001111111111111111111111",
+				iMux(45 downto 44)	when "100000000011111111111111111111111",
+				iMux(47 downto 46)	when "100000000111111111111111111111111",
+				iMux(49 downto 48)	when "100000001111111111111111111111111",
+				iMux(51 downto 50)	when "100000011111111111111111111111111",
+				iMux(53 downto 52)	when "100000111111111111111111111111111",
+				iMux(55 downto 54)	when "100001111111111111111111111111111",
+				iMux(57 downto 56)	when "100011111111111111111111111111111",
+				iMux(59 downto 58)	when "100111111111111111111111111111111",
+				iMux(61 downto 60)	when "101111111111111111111111111111111",
 				"00"	when others;
+
+
+	--MAIN: process(temp)
+	--	begin
+	--		if (temp = "11") then
+	--			oMux <= temp;
+	--		else 
+	--			oMux <= "00";
+	--		end if;
+	--end process;
+
+	--oMux <= temp;
 
 end Behavioral;

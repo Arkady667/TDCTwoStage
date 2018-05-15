@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon May 14 18:21:22 2018
+# Process ID: 22139
+# Current directory: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/impl_1
+# Command line: vivado -log TDC.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source TDC.tcl -notrace
+# Log file: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/impl_1/TDC.vdi
+# Journal file: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source TDC.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.1
+INFO: [Device 21-403] Loading part xc7vx485tffg1761-2
+INFO: [Project 1-570] Preparing netlist for logic optimization

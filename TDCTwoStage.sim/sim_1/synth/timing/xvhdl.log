@@ -1,0 +1,17 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/VDL_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity VDL_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TDC_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/ThermoTDL_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ThermoTDL_tb
+ERROR: [VRFC 10-149] 'thermodecodertdl' is not compiled in library xil_defaultlib [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/ThermoTDL_tb.vhd:103]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/ThermoTDL_tb.vhd:41]
+INFO: [VRFC 10-240] VHDL file /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/ThermoTDL_tb.vhd ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/ThermoVDL_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDL_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/Mux_exp_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Mux_exp_tb
+ERROR: [VRFC 10-149] 'mux_exp' is not compiled in library xil_defaultlib [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/Mux_exp_tb.vhd:134]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/Mux_exp_tb.vhd:41]
+INFO: [VRFC 10-240] VHDL file /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/Mux_exp_tb.vhd ignored due to errors

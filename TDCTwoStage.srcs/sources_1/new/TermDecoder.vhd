@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -36,28 +36,71 @@ library xil_defaultlib;
 
 entity TermDecoder is
   	Port ( 
-  		iData : in std_logic_vector(7 downto 0);
-  		oData : out std_logic_vector(2 downto 0)
+  		iData : in std_logic_vector(31 downto 0);
+  		oData : out std_logic_vector(4 downto 0)
     );
 end TermDecoder;
 
 architecture Behavioral of TermDecoder is
 
-begin
 
-	DECODER: process(iData)
-			 begin
-			 	case iData is
-			 		when "00000000" => oData <= "000";
-			 		when "10000000" => oData <= "001";
-			 		when "11000000" => oData <= "010";
-			 		when "11100000" => oData <= "011";
-			 		when "11110000" => oData <= "100";
-			 		when "11111000" => oData <= "101";
-			 		when "11111100" => oData <= "110";
-			 		when "11111110" => oData <= "111";
-			 		when others		=> oData <= "000";
-			 	end case;
-			 end process;
+	signal bin1, bin2, bin3 : std_logic_vector(4 downto 0);
+	signal thermo 			: std_logic_vector(31 downto 0);
+	signal temp				: unsigned(4 downto 0);
+
+begin
+	
+	PROC1: process(thermo)
+		--variable k : integer:=0;
+	begin
+		for k in 0 to 28 loop  --30
+			thermo(k) <= iData(k) or iData(k+1) or iData(k+2);
+			--k := k + 1;
+		end loop;
+
+		thermo(29) <= iData(29) or iData(30);
+		thermo(30) <= thermo(30);
+		--thermo(31) <= iData(31);
+		
+	end process;
+
+	PROC2: process(thermo)
+		--variable i : integer:=1;
+	begin
+		bin1 <= "00000";
+		for i in 1 to 16 loop
+			if (thermo(i-1)= '1' ) then
+			 	bin1 <= std_logic_vector(to_unsigned(i,bin1'length));
+			end if; 
+			--i := i + 1;
+		end loop;
+	end process;
+
+
+	PROC3: process(thermo)
+		--variable j : integer:=1;
+	begin
+		bin2 <= "00000";
+		for j in 1 to 15 loop
+			if (thermo(j+15)= '1' ) then 
+				bin2 <= std_logic_vector(to_unsigned(j,bin2'length));
+			end if;
+			--j <= j + 1;
+		end loop;
+
+	end process;
+
+	PROC4: process(bin1, bin2)
+	begin
+		if (thermo(15) = '1') then
+			--oData <= bin2 + "01111";
+			temp <= unsigned(bin2) + 16;
+			oData <= std_logic_vector(temp);
+		--elsif (thermo(31) = '1') then
+		--	oData <= (others => '1');
+		else
+			oData <= bin1;
+		end if;
+	end process;
 
 end Behavioral;

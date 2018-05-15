@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -33,35 +33,44 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 package TDC_pkg is
 
+	-- COMPONENTS
+	constant VDL_LENGTH : integer := 32; -- VDL Length 
+	constant TDL_LENGTH : integer := 8; -- TDL Length 
+
 	-- MUX
-	constant	inputsNumber : integer := 8;
+
+	--constant	inputsNumber : integer := 8;
 	constant	inputsWidth  : integer := 2;
 	type matrix IS array (natural range <>) OF std_logic_vector(inputsWidth-1 downto 0);
+
+	-- EDGE DETECTOR
+	type EdgeDetectorType IS array (natural range <>) OF std_logic_vector((2*VDL_LENGTH-3) downto 0); 
 	
-	-- COMPONENTS
-	constant VDL_LENGTH : integer := 8; -- VDL Length 
-	constant TDL_LENGTH : integer := 8; -- TDL Length 
+
 
 	component VDL is
 		port (
 			iLatch 	: in std_logic;
 	  		iLut	: in std_logic;
-			oVDL	: out matrix(0 to VDL_LENGTH-2);
-			oData	: out std_logic_vector(VDL_LENGTH-1 downto 0)
+	  		iReset  : in std_logic;
+			--oVDL	: out matrix(0 to VDL_LENGTH-2); -- SIM
+			oData	: out std_logic_vector(VDL_LENGTH-1 downto 0); 
+			oVDL    : out std_logic_vector((2*VDL_LENGTH-3) downto 0) -- SIM
 			);
 	end component VDL;
 
 	component TermDecoder is
 		port (
-			iData : in std_logic_vector(7 downto 0);
-	  		oData : out std_logic_vector(2 downto 0)	
+			iData : in std_logic_vector(31 downto 0);
+	  		oData : out std_logic_vector(4 downto 0)	
 		);
 	end component TermDecoder;
 
 	component Mux_exp is
 		port (
-			iMux : in matrix(0 to inputsNumber-2);
-		    iSel : in std_logic_vector(inputsNumber-1 downto 0);
+			iMux : in std_logic_vector((2*VDL_LENGTH-3) downto 0);
+		    iSel : in std_logic_vector(VDL_LENGTH-1 downto 0);	
+		    --iEN  : in std_logic;	
 		    oMux : out std_logic_vector(inputsWidth-1 downto 0)
 		);
 	end component Mux_exp;
@@ -81,6 +90,13 @@ package TDC_pkg is
 	  		oData : out std_logic_vector(4 downto 0)  -- 5 bit = 31 dec
 	    );
 	end component ThermoDecoderTDL;
+
+	component EdgeDetector is
+		  Port ( 
+	  		iDetector : in std_logic_vector((2*VDL_LENGTH-3) downto 0);
+	  		oEN 	  : out std_logic
+		  	);
+	end component EdgeDetector;
 
 	component BaudGen is
 		port (

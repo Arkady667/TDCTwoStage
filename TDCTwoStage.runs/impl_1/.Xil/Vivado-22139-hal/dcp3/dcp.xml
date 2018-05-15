@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Checkpoint Version="6" Minor="0">
+	<BUILD_NUMBER Name="1846317"/>
+	<FULL_BUILD Name="SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017"/>
+	<PRODUCT Name="Vivado v2017.1 (64-bit)"/>
+	<Part Name="xc7vx485tffg1761-2"/>
+	<BoardPart Name="xilinx.com:vc707:part0:1.3"/>
+	<Top Name="TDC"/>
+	<DisableAutoIOBuffers Name="0"/>
+	<OutOfContext Name="0"/>
+	<RunGenerated Name="1"/>
+	<HDPlatform Name="0"/>
+	<File Type="SHAPE" Name="TDC.shape" ModTime="1526314881"/>
+	<File Type="EDIF" Name="TDC.edf" ModTime="1526314881"/>
+	<File Type="VERILOG_STUB" Name="TDC_stub.v" ModTime="1526314881"/>
+	<File Type="VHDL_STUB" Name="TDC_stub.vhdl" ModTime="1526314881"/>
+	<File Type="XN" Name="TDC.xn" ModTime="1526314881"/>
+	<File Type="INCR" Name="TDC.incr" ModTime="1526314881"/>
+	<File Type="RDA" Name="TDC.rda" ModTime="1526314881"/>
+	<File Type="REPLAY" Name="TDC_iPhysOpt.tcl" ModTime="1526314881"/>
+	<File Type="WDF" Name="TDC.wdf" ModTime="1526314881"/>
+</Checkpoint>
+

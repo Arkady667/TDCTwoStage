@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Thu May 10 16:15:03 2018
+# Process ID: 24197
+# Current directory: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.sim/sim_1/behav
+# Command line: wbtcv -mode batch -source /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.sim/sim_1/behav/xsim.dir/VDL_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.sim/sim_1/behav/webtalk.log
+# Journal file: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.sim/sim_1/behav/webtalk.jou
+#-----------------------------------------------------------
+source /home/arkady/Documents/Vivado -notrace
+couldn't read file "/home/arkady/Documents/Vivado": illegal operation on a directory
+INFO: [Common 17-206] Exiting Webtalk at Thu May 10 16:15:03 2018...

@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log ThermoDecoderTDL.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ThermoDecoderTDL.tcl" );
+         "-log TDC.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TDC.tcl" );
 
 
 

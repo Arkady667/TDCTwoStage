@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log ThermoDecoderTDL.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ThermoDecoderTDL.tcl
+EAStep vivado -log TDC.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TDC.tcl

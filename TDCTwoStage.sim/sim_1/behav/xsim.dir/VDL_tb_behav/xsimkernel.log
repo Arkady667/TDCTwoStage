@@ -1,0 +1,7 @@
+Running: xsim.dir/VDL_tb_behav/xsimk -simmode gui -wdb VDL_tb_behav.wdb -simrunnum 0 -socket 60177
+Design successfully loaded
+Design Loading Memory Usage: 41668 KB (Peak: 41668 KB)
+Design Loading CPU Usage: 30 ms
+Simulation completed
+Simulation Memory Usage: 123404 KB (Peak: 188940 KB)
+Simulation CPU Usage: 40 ms

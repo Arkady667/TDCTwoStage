@@ -36,14 +36,15 @@ library xil_defaultlib;
 
 entity VDL is
 	generic (
-		LENGTH : integer := 8
+		LENGTH : integer := 32
 	);
   	port (
   		iLatch 	: in std_logic;
   		iLut	: in std_logic;
-  		oVDL	: out matrix(0 to LENGTH-2); -- (2*LENGTH-3)	16, -2 for last delay element ,-1 downto 0 
-  		oData   : out std_logic_vector(LENGTH-1 downto 0)
-  		--output  : out std_logic_vector((2*LENGTH-3) downto 0) 
+  		iReset	: in std_logic;
+  		--oVDL	: out matrix(0 to LENGTH-2); -- (2*LENGTH-3)	16, -2 for last delay element ,-1 downto 0  -- FOR SIMULATION PURPOSE 
+  		oData   : out std_logic_vector(LENGTH-1 downto 0);
+  		oVDL  : out std_logic_vector((2*LENGTH-3) downto 0) 
   	);
 end VDL;
 
@@ -55,8 +56,12 @@ signal oNand		: std_logic_vector(LENGTH-2 downto 0);
 signal merged		: std_logic_vector((2*LENGTH-3) downto 0);
 
 attribute dont_touch 	: string;
---attribute dont_touch of oNand	: signal is "true";
---attribute dont_touch of merged  : signal is "true";
+attribute dont_touch of merged  : signal is "true";
+attribute dont_touch of iLut  : signal is "true";
+attribute gated_clock : string;
+attribute gated_clock of iLut : signal is "true";
+
+
 
 begin
 
@@ -64,7 +69,7 @@ begin
 		LUT_init: if i = 0 generate
 			cmp_1LUT: LUT1
 		    generic map (
-		        INIT => "00")
+		        INIT => "10")
 		    port map (
 		        O => luts(0), -- LUT general output
 		        I0 => iLut
@@ -74,7 +79,7 @@ begin
 		LUT_next: if i > 0 generate
 			cmp_1LUT: LUT1
 		    generic map (
-		        INIT => "00")
+		        INIT => "10")
 		    port map (
 		        O => luts(i), -- LUT general output
 		        I0 => luts(i-1) -- LUT input
@@ -90,7 +95,7 @@ begin
 				INIT => '0') -- Initial value of latch ('0' or '1')
 			port map (
 				Q => latchLine(0), -- Data output
-				CLR => '0', -- Asynchronous clear/reset input
+				CLR => iReset, -- Asynchronous clear/reset input
 				D => iLatch, -- Data input
 				G => luts(0), -- Gate input
 				GE => '1' -- Gate enable input
@@ -103,7 +108,7 @@ begin
 				INIT => '0') -- Initial value of latch ('0' or '1')
 			port map (
 				Q => latchLine(j), -- Data output
-				CLR => '0', -- Asynchronous clear/reset input
+				CLR => iReset, -- Asynchronous clear/reset input
 				D => latchLine(j-1), -- Data input
 				G => luts(j), -- Gate input
 				GE => '1' -- Gate enable input
@@ -123,31 +128,23 @@ begin
 	end generate;
 
 	-- merging signals
-	merged(1 downto 0) 		<= luts(0) & oNand(0);
-	merged(3 downto 2) 		<= luts(1) & oNand(1);
-	merged(5 downto 4) 		<= luts(2) & oNand(2);
-	merged(7 downto 6) 		<= luts(3) & oNand(3);
-	merged(9 downto 8) 		<= luts(4) & oNand(4);
-	merged(11 downto 10) 	<= luts(5) & oNand(5);
-	merged(13 downto 12) 	<= luts(6) & oNand(6);
+		--merged(1 downto 0) 		<= luts(0) & oNand(0);
+		--merged(3 downto 2) 		<= luts(1) & oNand(1);
+		--merged(5 downto 4) 		<= luts(2) & oNand(2);
+		--merged(7 downto 6) 		<= luts(3) & oNand(3);
+		--merged(9 downto 8) 		<= luts(4) & oNand(4);
+		--merged(11 downto 10) 	<= luts(5) & oNand(5);
+		--merged(13 downto 12) 	<= luts(6) & oNand(6);
 
---	MUX_IN: for l in 0 to LENGTH-2 generate
---		oVDL(l) <= merged(2*l-1 downto 2*l);
---	end generate;
-
-	oVDL(0) <=	merged(1 downto 0);
-	oVDL(1) <=	merged(3 downto 2);
-	oVDL(2) <=	merged(5 downto 4);
-	oVDL(3) <=	merged(7 downto 6);
-	oVDL(4) <=	merged(9 downto 8);
-	oVDL(5) <=	merged(11 downto 10);
-	oVDL(6) <=	merged(13 downto 12);
+	merged(1 downto 0)	<= oNand(0) & luts(0) ;
+	MUX_IN: for l in 1 to LENGTH-2 generate
+		merged(2*l+1 downto 2*l) <= oNand(l) & luts(l);
+	end generate;
 
 
-	oData <= latchLine;
---	output <= merged;
---	oLatch <= oNand;
---	oLut <= luts;
+
+	oData <= latchLine; 
+	oVDL <= merged; -- FOR SIMULATION PURPOSE 
 
 end Behavioral;
 
