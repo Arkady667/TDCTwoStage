@@ -1,0 +1,748 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Tue May 22 20:34:22 2018
+| Host         : hal running 64-bit Ubuntu 16.04.4 LTS
+| Command      : report_methodology -file TDC_methodology_drc_routed.rpt -rpx TDC_methodology_drc_routed.rpx
+| Design       : TDC
+| Device       : xc7vx485tffg1761-2
+| Speed File   : -2
+| Design State : Routed
+-------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 142
++-----------+----------+------------------------------------------------------------------+------------+
+| Rule      | Severity | Description                                                      | Violations |
++-----------+----------+------------------------------------------------------------------+------------+
+| CKLD-2    | Warning  | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 2          |
+| TIMING-13 | Warning  | Timing paths ignored due to path segmentation                    | 33         |
+| TIMING-17 | Warning  | Non-clocked sequential cell                                      | 66         |
+| TIMING-20 | Warning  | Non-clocked latch                                                | 41         |
++-----------+----------+------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CKLD-2#1 Warning
+Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
+Clock net iStart_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): iStart_IBUF_inst/O
+Related violations: <none>
+
+CKLD-2#2 Warning
+Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
+Clock net iStop_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): iStop_IBUF_inst/O
+Related violations: <none>
+
+TIMING-13#1 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) Mux_exp_cmp/oMux[1]_INST_0/O. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#2 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[0].LATCH_init.LATCH_first/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#3 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[10].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#4 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[11].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#5 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[12].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#6 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[13].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#7 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[14].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#8 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[15].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#9 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[16].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#10 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[17].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#11 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[18].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#12 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[19].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#13 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[1].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#14 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[20].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#15 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[21].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#16 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[22].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#17 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[23].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#18 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[24].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#19 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[25].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#20 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[26].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#21 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[27].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#22 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[28].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#23 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[29].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#24 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[2].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#25 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[30].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#26 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[31].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#27 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[3].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#28 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[4].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#29 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[5].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#30 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[6].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#31 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[7].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#32 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[8].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-13#33 Warning
+Timing paths ignored due to path segmentation  
+Some timing paths are not reported due to path segmentation on pin(s) VDL_cmp/LATCH_TAPS[9].LATCH_next.LATCH/Q. To prevent path segmentation, all the Min and Max delay constraints should be defined with a list of valid startpoints and endpoints
+Related violations: <none>
+
+TIMING-17#1 Warning
+Non-clocked sequential cell  
+The clock pin REG_SP/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Warning
+Non-clocked sequential cell  
+The clock pin REG_ST/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[0].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[10].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[11].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[12].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[13].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[14].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[15].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[16].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[17].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[18].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[19].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[1].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[20].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[21].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[22].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#18 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[23].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#19 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[24].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#20 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[25].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#21 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[26].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#22 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[27].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#23 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[28].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#24 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[29].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#25 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[2].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#26 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[30].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[31].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[32].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#29 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[33].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#30 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[34].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#31 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[35].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#32 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[36].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#33 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[37].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#34 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[38].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#35 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[39].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#36 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[3].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#37 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[40].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#38 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[41].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#39 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[42].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#40 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[43].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#41 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[44].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#42 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[45].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#43 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[46].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#44 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[47].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#45 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[48].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#46 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[49].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#47 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[4].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#48 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[50].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#49 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[51].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#50 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[52].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#51 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[53].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#52 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[54].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#53 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[55].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#54 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[56].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#55 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[57].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#56 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[58].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#57 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[59].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#58 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[5].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#59 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[60].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#60 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[61].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#61 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[62].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#62 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[63].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#63 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[6].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#64 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[7].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#65 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[8].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#66 Warning
+Non-clocked sequential cell  
+The clock pin TDL_cmp/REG_TAPS[9].REG/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch TermDecoder_VDL_cmp/temp_reg[0] cannot be properly analyzed as its control pin TermDecoder_VDL_cmp/temp_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch TermDecoder_VDL_cmp/temp_reg[1] cannot be properly analyzed as its control pin TermDecoder_VDL_cmp/temp_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch TermDecoder_VDL_cmp/temp_reg[2] cannot be properly analyzed as its control pin TermDecoder_VDL_cmp/temp_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch TermDecoder_VDL_cmp/temp_reg[3] cannot be properly analyzed as its control pin TermDecoder_VDL_cmp/temp_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch ThermoDecoderTDL_cmp/temp_reg[0] cannot be properly analyzed as its control pin ThermoDecoderTDL_cmp/temp_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch ThermoDecoderTDL_cmp/temp_reg[1] cannot be properly analyzed as its control pin ThermoDecoderTDL_cmp/temp_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch ThermoDecoderTDL_cmp/temp_reg[2] cannot be properly analyzed as its control pin ThermoDecoderTDL_cmp/temp_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch ThermoDecoderTDL_cmp/temp_reg[3] cannot be properly analyzed as its control pin ThermoDecoderTDL_cmp/temp_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch ThermoDecoderTDL_cmp/temp_reg[4] cannot be properly analyzed as its control pin ThermoDecoderTDL_cmp/temp_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[0].LATCH_init.LATCH_first cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[0].LATCH_init.LATCH_first/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[10].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[10].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[11].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[11].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[12].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[12].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[13].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[13].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[14].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[14].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[15].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[15].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[16].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[16].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[17].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[17].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[18].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[18].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[19].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[19].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[1].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[1].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[20].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[20].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[21].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[21].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[22].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[22].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[23].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[23].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[24].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[24].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[25].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[25].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[26].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[26].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[27].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[27].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[28].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[28].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[29].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[29].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[2].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[2].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[30].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[30].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[31].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[31].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#35 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[3].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[3].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[4].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[4].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[5].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[5].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[6].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[6].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#39 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[7].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[7].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#40 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[8].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[8].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#41 Warning
+Non-clocked latch  
+The latch VDL_cmp/LATCH_TAPS[9].LATCH_next.LATCH cannot be properly analyzed as its control pin VDL_cmp/LATCH_TAPS[9].LATCH_next.LATCH/G is not reached by a timing clock
+Related violations: <none>
+
+

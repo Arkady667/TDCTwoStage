@@ -2,8 +2,8 @@
 # Webtalk v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Mon May 14 09:14:37 2018
-# Process ID: 4937
+# Start of session at: Tue May 22 20:36:28 2018
+# Process ID: 31403
 # Current directory: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.sim/sim_1/impl/func
 # Command line: wbtcv -mode batch -source /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.sim/sim_1/impl/func/xsim.dir/TDC_tb_func_impl/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.sim/sim_1/impl/func/webtalk.log

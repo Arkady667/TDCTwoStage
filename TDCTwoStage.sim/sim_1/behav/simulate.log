@@ -1,2 +1,4 @@
 Vivado Simulator 2017.1
 Time resolution is 1 ps
+Note: UART Terminal Test Completed!
+Time: 1896834 ns  Iteration: 0  Process: /tUART_sim/stimulus  File: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/tUART_sim.vhd

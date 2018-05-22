@@ -35,31 +35,35 @@ library xil_defaultlib;
     use xil_defaultlib.TDC_pkg.all;
 
 entity TermDecoder is
+	generic (
+		INPUTS: integer := 32;		--always even!
+		OUTPUTS: integer := 5
+	);
   	Port ( 
-  		iData : in std_logic_vector(31 downto 0);
-  		oData : out std_logic_vector(4 downto 0)
+  		iData : in std_logic_vector(INPUTS-1 downto 0);
+  		oData : out std_logic_vector(OUTPUTS-1 downto 0)
     );
 end TermDecoder;
 
 architecture Behavioral of TermDecoder is
 
 
-	signal bin1, bin2, bin3 : std_logic_vector(4 downto 0);
-	signal thermo 			: std_logic_vector(31 downto 0);
-	signal temp				: unsigned(4 downto 0);
+	signal bin1, bin2, bin3 : std_logic_vector(OUTPUTS-1 downto 0);
+	signal thermo 			: std_logic_vector(INPUTS-1 downto 0);
+	signal temp				: unsigned(OUTPUTS-1 downto 0);
 
 begin
 	
 	PROC1: process(thermo)
 		--variable k : integer:=0;
 	begin
-		for k in 0 to 28 loop  --30
+		for k in 0 to INPUTS-3 loop  -- -2
 			thermo(k) <= iData(k) or iData(k+1) or iData(k+2);
 			--k := k + 1;
 		end loop;
 
-		thermo(29) <= iData(29) or iData(30);
-		thermo(30) <= thermo(30);
+		thermo(INPUTS-2) <= iData(INPUTS-2) or iData(INPUTS-1);
+		thermo(INPUTS-1) <= thermo(INPUTS-1);
 		--thermo(31) <= iData(31);
 		
 	end process;
@@ -68,7 +72,7 @@ begin
 		--variable i : integer:=1;
 	begin
 		bin1 <= "00000";
-		for i in 1 to 16 loop
+		for i in 1 to INPUTS/2 loop
 			if (thermo(i-1)= '1' ) then
 			 	bin1 <= std_logic_vector(to_unsigned(i,bin1'length));
 			end if; 
@@ -81,8 +85,8 @@ begin
 		--variable j : integer:=1;
 	begin
 		bin2 <= "00000";
-		for j in 1 to 15 loop
-			if (thermo(j+15)= '1' ) then 
+		for j in 1 to INPUTS/2-1 loop
+			if (thermo(j+(INPUTS/2-1))= '1' ) then 
 				bin2 <= std_logic_vector(to_unsigned(j,bin2'length));
 			end if;
 			--j <= j + 1;
@@ -92,9 +96,9 @@ begin
 
 	PROC4: process(bin1, bin2)
 	begin
-		if (thermo(15) = '1') then
+		if (thermo(INPUTS/2-1) = '1') then
 			--oData <= bin2 + "01111";
-			temp <= unsigned(bin2) + 16;
+			temp <= unsigned(bin2) + (INPUTS/2);
 			oData <= std_logic_vector(temp);
 		--elsif (thermo(31) = '1') then
 		--	oData <= (others => '1');

@@ -2,8 +2,8 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Mon May 14 18:20:35 2018
-# Process ID: 22002
+# Start of session at: Tue May 22 20:32:07 2018
+# Process ID: 30462
 # Current directory: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/synth_1
 # Command line: vivado -log TDC.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TDC.tcl
 # Log file: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/synth_1/TDC.vds

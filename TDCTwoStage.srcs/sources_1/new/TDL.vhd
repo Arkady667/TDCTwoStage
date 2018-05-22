@@ -36,7 +36,7 @@ library UNISIM;
 
 entity TDL is
 	generic (
-		LENGTH	:integer :=8
+		LENGTH	:integer :=64/4
 	);
 	port (
 		iClk	: in std_logic; -- STOP

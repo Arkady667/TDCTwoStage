@@ -14,403 +14,763 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t-ffg1761'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t-ffg1761'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 22024 
+INFO: Helper process launched with PID 30482 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1173.125 ; gain = 66.988 ; free physical = 2429 ; free virtual = 10186
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1190.121 ; gain = 69.000 ; free physical = 2146 ; free virtual = 9986
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'TDC' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:53]
-INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:75]
-INFO: [Synth 8-3491] module 'VDL' declared at '/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:37' bound to instance 'VDL_cmp' of component 'VDL' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:100]
+WARNING: [Synth 8-1090] 'shiftregister' is not compiled in library work [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/SRDelayLines.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'TDC' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:65]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:67]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:68]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:94]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:97]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_ST' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:130]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_SP' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:140]
+INFO: [Synth 8-3491] module 'VDL' declared at '/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:37' bound to instance 'VDL_cmp' of component 'VDL' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:187]
 INFO: [Synth 8-638] synthesizing module 'VDL' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:51]
 	Parameter LENGTH bound to: 32 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:43]
 INFO: [Synth 8-5534] Detected attribute (* gated_clock = "true" *) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:43]
 INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:56]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:70]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
-	Parameter INIT bound to: 2'b10 
-INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT1' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:80]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:57]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:75]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-113] binding component instance 'cmp_1LUT' to cell 'LUT2' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:86]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH_first' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:93]
+INFO: [Synth 8-113] binding component instance 'LATCH_first' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:100]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CLR_INVERTED bound to: 1'b0 
 	Parameter IS_G_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'VDL' (1#1) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:51]
-INFO: [Synth 8-3491] module 'TermDecoder' declared at '/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TermDecoder.vhd:37' bound to instance 'TermDecoder_VDL_cmp' of component 'TermDecoder' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:109]
-INFO: [Synth 8-638] synthesizing module 'TermDecoder' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TermDecoder.vhd:44]
-WARNING: [Synth 8-614] signal 'iData' is read in the process but is not in the sensitivity list [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TermDecoder.vhd:53]
-WARNING: [Synth 8-614] signal 'thermo' is read in the process but is not in the sensitivity list [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TermDecoder.vhd:93]
-WARNING: [Synth 8-614] signal 'temp' is read in the process but is not in the sensitivity list [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TermDecoder.vhd:93]
-INFO: [Synth 8-256] done synthesizing module 'TermDecoder' (2#1) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TermDecoder.vhd:44]
-INFO: [Synth 8-3491] module 'Mux_exp' declared at '/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:37' bound to instance 'Mux_exp_cmp' of component 'Mux_exp' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:116]
-INFO: [Synth 8-638] synthesizing module 'Mux_exp' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:47]
-WARNING: [Synth 8-153] case item 33'b100000000000000000000000000000001 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000000000000000000011 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000000000000000000111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000000000000000001111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000000000000000011111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000000000000000111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000000000000001111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000000000000011111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000000000000111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000000000001111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000000000011111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000000000111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000000001111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000000011111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000000111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000001111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000011111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000000111111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000001111111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000011111111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000000111111111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000001111111111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000011111111111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000000111111111111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000001111111111111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000011111111111111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100000111111111111111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100001111111111111111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100011111111111111111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b100111111111111111111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-WARNING: [Synth 8-153] case item 33'b101111111111111111111111111111111 will never be executed [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'Mux_exp' (3#1) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:47]
-INFO: [Synth 8-3491] module 'TDL' declared at '/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:37' bound to instance 'TDL_cmp' of component 'TDL' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:123]
-INFO: [Synth 8-638] synthesizing module 'TDL' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:49]
-	Parameter LENGTH bound to: 8 - type: integer 
-INFO: [Synth 8-113] binding component instance 'cmp_CARRY4' to cell 'CARRY4' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:62]
-INFO: [Synth 8-113] binding component instance 'cmp_CARRY4' to cell 'CARRY4' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:73]
-INFO: [Synth 8-113] binding component instance 'cmp_CARRY4' to cell 'CARRY4' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:73]
-INFO: [Synth 8-113] binding component instance 'cmp_CARRY4' to cell 'CARRY4' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:73]
-INFO: [Synth 8-113] binding component instance 'cmp_CARRY4' to cell 'CARRY4' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:73]
-INFO: [Synth 8-113] binding component instance 'cmp_CARRY4' to cell 'CARRY4' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:73]
-INFO: [Synth 8-113] binding component instance 'cmp_CARRY4' to cell 'CARRY4' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:73]
-INFO: [Synth 8-113] binding component instance 'cmp_CARRY4' to cell 'CARRY4' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:73]
+INFO: [Synth 8-113] binding component instance 'LATCH' to cell 'LDCE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:113]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'REG' to cell 'FDRE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:85]
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_cmp' to cell 'FDPE' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:152]
 INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'VDL' (1#1) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/VDL.vhd:51]
+INFO: [Synth 8-3491] module 'Mux_exp' declared at '/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:37' bound to instance 'Mux_exp_cmp' of component 'Mux_exp' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:195]
+INFO: [Synth 8-638] synthesizing module 'Mux_exp' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:47]
+INFO: [Synth 8-5534] Detected attribute (* gated_clock = "true" *) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'Mux_exp' (2#1) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/Mux_exp.vhd:47]
+INFO: [Synth 8-3491] module 'TermDecoder' declared at '/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TermDecoder.vhd:37' bound to instance 'TermDecoder_VDL_cmp' of component 'TermDecoder' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:203]
+INFO: [Synth 8-638] synthesizing module 'TermDecoder' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TermDecoder.vhd:48]
+	Parameter INPUTS bound to: 32 - type: integer 
+	Parameter OUTPUTS bound to: 5 - type: integer 
+WARNING: [Synth 8-614] signal 'iData' is read in the process but is not in the sensitivity list [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TermDecoder.vhd:57]
+WARNING: [Synth 8-614] signal 'thermo' is read in the process but is not in the sensitivity list [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TermDecoder.vhd:97]
+WARNING: [Synth 8-614] signal 'temp' is read in the process but is not in the sensitivity list [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TermDecoder.vhd:97]
+INFO: [Synth 8-256] done synthesizing module 'TermDecoder' (3#1) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TermDecoder.vhd:48]
+INFO: [Synth 8-3491] module 'TDL' declared at '/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:37' bound to instance 'TDL_cmp' of component 'TDL' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'TDL' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:49]
+	Parameter LENGTH bound to: 16 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
@@ -428,111 +788,18 @@ INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instanc
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 INFO: [Synth 8-256] done synthesizing module 'TDL' (4#1) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDL.vhd:49]
-INFO: [Synth 8-3491] module 'ThermoDecoderTDL' declared at '/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/ThermoDecoderTDL.vhd:41' bound to instance 'ThermoDecoderTDL_cmp' of component 'ThermoDecoderTDL' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:130]
+INFO: [Synth 8-3491] module 'ThermoDecoderTDL' declared at '/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/ThermoDecoderTDL.vhd:37' bound to instance 'ThermoDecoderTDL_cmp' of component 'ThermoDecoderTDL' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:216]
 INFO: [Synth 8-638] synthesizing module 'ThermoDecoderTDL' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/ThermoDecoderTDL.vhd:48]
-WARNING: [Synth 8-614] signal 'iData' is read in the process but is not in the sensitivity list [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/ThermoDecoderTDL.vhd:56]
-WARNING: [Synth 8-614] signal 'thermo' is read in the process but is not in the sensitivity list [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/ThermoDecoderTDL.vhd:96]
-WARNING: [Synth 8-614] signal 'temp' is read in the process but is not in the sensitivity list [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/ThermoDecoderTDL.vhd:96]
+	Parameter INPUTS bound to: 64 - type: integer 
+	Parameter OUTPUTS bound to: 6 - type: integer 
+WARNING: [Synth 8-614] signal 'iData' is read in the process but is not in the sensitivity list [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/ThermoDecoderTDL.vhd:57]
+WARNING: [Synth 8-614] signal 'thermo' is read in the process but is not in the sensitivity list [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/ThermoDecoderTDL.vhd:97]
+WARNING: [Synth 8-614] signal 'temp' is read in the process but is not in the sensitivity list [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/ThermoDecoderTDL.vhd:97]
 INFO: [Synth 8-256] done synthesizing module 'ThermoDecoderTDL' (5#1) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/ThermoDecoderTDL.vhd:48]
-INFO: [Synth 8-256] done synthesizing module 'TDC' (6#1) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:53]
-WARNING: [Synth 8-3331] design ThermoDecoderTDL has unconnected port iData[31]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[61]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[60]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[59]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[58]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[57]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[56]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[55]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[54]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[53]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[52]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[51]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[50]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[49]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[48]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[47]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[46]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[45]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[44]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[43]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[42]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[41]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[40]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[39]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[38]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[37]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[36]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[35]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[34]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[33]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[32]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[31]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[30]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[29]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[28]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[27]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[26]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[25]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[24]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[23]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[22]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[21]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[20]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[19]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[18]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[17]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[16]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[15]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[14]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[13]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[12]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[11]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[10]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[9]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[8]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[7]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[6]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[5]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[4]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[3]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[2]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[1]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[0]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[31]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[30]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[29]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[28]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[27]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[26]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[25]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[24]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[23]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[22]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[21]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[20]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[19]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[18]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[17]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[16]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[15]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[14]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[13]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[12]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[11]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[10]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[9]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[8]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[7]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[6]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[5]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[4]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[3]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[2]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[1]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iSel[0]
-WARNING: [Synth 8-3331] design TermDecoder has unconnected port iData[31]
+INFO: [Synth 8-256] done synthesizing module 'TDC' (6#1) [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TDC.vhd:65]
+WARNING: [Synth 8-3331] design TDC has unconnected port Clk
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1213.625 ; gain = 107.488 ; free physical = 2455 ; free virtual = 10194
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1229.621 ; gain = 108.500 ; free physical = 2152 ; free virtual = 9992
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -542,56 +809,54 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1213.625 ; gain = 107.488 ; free physical = 2456 ; free virtual = 10195
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1229.621 ; gain = 108.500 ; free physical = 2153 ; free virtual = 9994
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7vx485tffg1761-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_1/new/constraints.xdc]
-WARNING: [Vivado 12-180] No cells matched 'LATCH_TAPS[*].LATCH_next.LATCH'. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_1/new/constraints.xdc:4]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_1/new/constraints.xdc:4]
+Parsing XDC File [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirInClk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:44]
+Finished Parsing XDC File [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TDC_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TDC_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/synth_1/dont_touch.xdc]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {REF_NAME==FifoVDL || ORIG_REF_NAME==FifoVDL}'. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/synth_1/dont_touch.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/synth_1/dont_touch.xdc:7]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-180] No cells matched 'LATCH_TAPS[0].LATCH_init.LATCH_first'. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_1/new/constraints.xdc:5]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_1/new/constraints.xdc:5]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {REF_NAME==ShiftRegister || ORIG_REF_NAME==ShiftRegister}'. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/synth_1/dont_touch.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/synth_1/dont_touch.xdc:10]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'virtclk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_1/new/constraints.xdc:10]
-WARNING: [Vivado 12-584] No ports matched 'iLut'. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_1/new/constraints.xdc:12]
-CRITICAL WARNING: [Vivado 12-4739] set_input_delay:No valid object(s) found for '-objects [get_ports iLut]'. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_1/new/constraints.xdc:12]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-584] No ports matched 'oData[*]'. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_1/new/constraints.xdc:14]
-CRITICAL WARNING: [Vivado 12-4739] set_output_delay:No valid object(s) found for '-objects [get_ports {oData[*]}]'. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_1/new/constraints.xdc:14]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-Finished Parsing XDC File [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1674.242 ; gain = 0.000 ; free physical = 2052 ; free virtual = 9790
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1690.895 ; gain = 0.000 ; free physical = 1771 ; free virtual = 9611
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1674.242 ; gain = 568.105 ; free physical = 2136 ; free virtual = 9874
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1690.895 ; gain = 569.773 ; free physical = 1860 ; free virtual = 9701
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7vx485tffg1761-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1674.242 ; gain = 568.105 ; free physical = 2136 ; free virtual = 9874
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1690.895 ; gain = 569.773 ; free physical = 1860 ; free virtual = 9701
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1674.242 ; gain = 568.105 ; free physical = 2138 ; free virtual = 9876
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1690.895 ; gain = 569.773 ; free physical = 1862 ; free virtual = 9703
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'temp_reg' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TermDecoder.vhd:97]
-WARNING: [Synth 8-327] inferring latch for variable 'temp_reg' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/ThermoDecoderTDL.vhd:100]
+WARNING: [Synth 8-327] inferring latch for variable 'temp_reg' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/TermDecoder.vhd:101]
+WARNING: [Synth 8-327] inferring latch for variable 'temp_reg' [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/new/ThermoDecoderTDL.vhd:101]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1674.242 ; gain = 568.105 ; free physical = 2130 ; free virtual = 9868
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1690.895 ; gain = 569.773 ; free physical = 1854 ; free virtual = 9695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -603,6 +868,9 @@ Report RTL Partitions:
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Muxes : 
+	  32 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -610,6 +878,11 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module Mux_exp 
+Detailed RTL Component Info : 
++---Muxes : 
+	  32 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -625,17 +898,13 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3331] design ThermoDecoderTDL has unconnected port iData[31]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[61]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[60]
-WARNING: [Synth 8-3331] design Mux_exp has unconnected port iMux[59]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3331] design TDC has unconnected port Clk
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (TermDecoder_VDL_cmp/\temp_reg[4] )
 WARNING: [Synth 8-3332] Sequential element (temp_reg[4]) is unused and will be removed from module TermDecoder.
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (ThermoDecoderTDL_cmp/\temp_reg[4] )
-WARNING: [Synth 8-3332] Sequential element (temp_reg[4]) is unused and will be removed from module ThermoDecoderTDL.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ThermoDecoderTDL_cmp/\temp_reg[5] )
+WARNING: [Synth 8-3332] Sequential element (temp_reg[5]) is unused and will be removed from module ThermoDecoderTDL.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1674.242 ; gain = 568.105 ; free physical = 2116 ; free virtual = 9854
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1690.895 ; gain = 569.773 ; free physical = 1836 ; free virtual = 9677
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -647,13 +916,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1674.242 ; gain = 568.105 ; free physical = 2009 ; free virtual = 9747
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1690.895 ; gain = 569.773 ; free physical = 1714 ; free virtual = 9555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1674.242 ; gain = 568.105 ; free physical = 2009 ; free virtual = 9747
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1690.895 ; gain = 569.773 ; free physical = 1714 ; free virtual = 9555
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -665,7 +934,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1674.242 ; gain = 568.105 ; free physical = 2009 ; free virtual = 9747
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1690.895 ; gain = 569.773 ; free physical = 1713 ; free virtual = 9554
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -688,9 +957,8 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3295] tying undriven pin oENSignal_inferred:in0 to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1674.242 ; gain = 568.105 ; free physical = 2009 ; free virtual = 9747
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1690.895 ; gain = 569.773 ; free physical = 1713 ; free virtual = 9554
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -703,7 +971,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1674.242 ; gain = 568.105 ; free physical = 2009 ; free virtual = 9747
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1690.895 ; gain = 569.773 ; free physical = 1713 ; free virtual = 9554
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -715,25 +983,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1674.242 ; gain = 568.105 ; free physical = 2009 ; free virtual = 9747
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1690.895 ; gain = 569.773 ; free physical = 1713 ; free virtual = 9554
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1674.242 ; gain = 568.105 ; free physical = 2009 ; free virtual = 9747
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1690.895 ; gain = 569.773 ; free physical = 1713 ; free virtual = 9554
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1674.242 ; gain = 568.105 ; free physical = 2009 ; free virtual = 9747
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1690.895 ; gain = 569.773 ; free physical = 1713 ; free virtual = 9554
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1674.242 ; gain = 568.105 ; free physical = 2009 ; free virtual = 9747
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1690.895 ; gain = 569.773 ; free physical = 1713 ; free virtual = 9554
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -749,50 +1017,49 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |     8|
-|3     |LUT1   |    33|
-|4     |LUT2   |    37|
-|5     |LUT3   |     4|
-|6     |LUT4   |     4|
-|7     |LUT5   |    10|
-|8     |LUT6   |    30|
-|9     |FDRE   |    32|
-|10    |LD     |     8|
-|11    |LDCE   |    32|
-|12    |IBUF   |     3|
-|13    |OBUF   |    10|
+|1     |CARRY4 |    16|
+|2     |LUT2   |    76|
+|3     |LUT3   |     6|
+|4     |LUT4   |    21|
+|5     |LUT5   |    40|
+|6     |LUT6   |    54|
+|7     |FDPE   |    62|
+|8     |FDRE   |    66|
+|9     |LD     |     9|
+|10    |LDCE   |    32|
+|11    |IBUF   |     3|
+|12    |OBUF   |    11|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+-----------------------+-----------------+------+
 |      |Instance               |Module           |Cells |
 +------+-----------------------+-----------------+------+
-|1     |top                    |                 |   212|
-|2     |  VDL_cmp              |VDL              |    95|
-|3     |  TermDecoder_VDL_cmp  |TermDecoder      |    31|
-|4     |  Mux_exp_cmp          |Mux_exp          |     0|
-|5     |  TDL_cmp              |TDL              |    40|
-|6     |  ThermoDecoderTDL_cmp |ThermoDecoderTDL |    31|
+|1     |top                    |                 |   396|
+|2     |  VDL_cmp              |VDL              |   157|
+|3     |  Mux_exp_cmp          |Mux_exp          |    36|
+|4     |  TermDecoder_VDL_cmp  |TermDecoder      |    31|
+|5     |  TDL_cmp              |TDL              |    80|
+|6     |  ThermoDecoderTDL_cmp |ThermoDecoderTDL |    76|
 +------+-----------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1674.242 ; gain = 568.105 ; free physical = 2009 ; free virtual = 9747
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1690.895 ; gain = 569.773 ; free physical = 1713 ; free virtual = 9554
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 101 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1674.242 ; gain = 107.488 ; free physical = 2063 ; free virtual = 9801
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1674.250 ; gain = 568.105 ; free physical = 2065 ; free virtual = 9803
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1690.895 ; gain = 108.500 ; free physical = 1768 ; free virtual = 9608
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1690.902 ; gain = 569.773 ; free physical = 1770 ; free virtual = 9611
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 8 instances were transformed.
-  LD => LDCE: 8 instances
+  A total of 9 instances were transformed.
+  LD => LDCE: 9 instances
 
-138 Infos, 146 Warnings, 4 Critical Warnings and 0 Errors encountered.
+142 Infos, 15 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 1674.250 ; gain = 588.711 ; free physical = 2024 ; free virtual = 9762
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1690.902 ; gain = 600.367 ; free physical = 1729 ; free virtual = 9570
 INFO: [Common 17-1381] The checkpoint '/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/synth_1/TDC.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1698.254 ; gain = 0.000 ; free physical = 2024 ; free virtual = 9762
-INFO: [Common 17-206] Exiting Vivado at Mon May 14 18:21:21 2018...
+report_utilization: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1714.906 ; gain = 0.000 ; free physical = 1727 ; free virtual = 9568
+INFO: [Common 17-206] Exiting Vivado at Tue May 22 20:32:55 2018...

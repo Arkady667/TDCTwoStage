@@ -42,8 +42,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {HDL 9-1061} -limit 100000
-set_msg_config -id {HDL 9-1654} -limit 100000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -57,8 +55,17 @@ set rc [catch {
   set_property parent.project_path {/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.xpr} [current_project]
   set_property ip_output_repo {{/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet {{/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/synth_1/TDC.dcp}}
-  read_xdc {{/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_1/new/constraints.xdc}}
+  read_ip -quiet {{/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/FifoVDL/FifoVDL.xci}}
+  set_property is_locked true [get_files {{/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/FifoVDL/FifoVDL.xci}}]
+  read_ip -quiet {{/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/ShiftRegister/ShiftRegister.xci}}
+  set_property is_locked true [get_files {{/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/ShiftRegister/ShiftRegister.xci}}]
+  read_ip -quiet {{/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/FifoTDL/FifoTDL.xci}}
+  set_property is_locked true [get_files {{/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/FifoTDL/FifoTDL.xci}}]
+  read_ip -quiet {{/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci}}
+  set_property is_locked true [get_files {{/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci}}]
+  read_xdc {{/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc}}
   link_design -top TDC -part xc7vx485tffg1761-2
   close_msg_db -file init_design.pb
 } RESULT]

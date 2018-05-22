@@ -1,0 +1,8 @@
+Vivado Simulator 2017.1
+Time resolution is 1 ps
+Failure: end of simulation
+Time: 112500 ps  Iteration: 0  Process: /TDC_tb/P_STIM  File: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd
+$finish called at time : 112500 ps : File "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd" Line 86
+Failure: end of simulation
+Time: 112500 ps  Iteration: 0  Process: /TDC_tb/P_STIM  File: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd
+$finish called at time : 112500 ps : File "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd" Line 86

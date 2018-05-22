@@ -1,0 +1,162 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Tue May 22 20:33:42 2018
+| Host         : hal running 64-bit Ubuntu 16.04.4 LTS
+| Command      : report_control_sets -verbose -file TDC_control_sets_placed.rpt
+| Design       : TDC
+| Device       : xc7vx485t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    99 |
+| Unused register locations in slices containing registers |   679 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               9 |            4 |
+| No           | No                    | Yes                    |              62 |           62 |
+| No           | Yes                   | No                     |              98 |           50 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------+---------------+--------------------+------------------+----------------+
+|          Clock Signal          | Enable Signal |  Set/Reset Signal  | Slice Load Count | Bel Load Count |
++--------------------------------+---------------+--------------------+------------------+----------------+
+|                                |               | VDL_cmp/merged[11] |                1 |              1 |
+| ~VDL_cmp/merged[42]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[40]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[38]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[36]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[34]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[22]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[32]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[28]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[16]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[18]            |               | iReset_IBUF        |                1 |              1 |
+|                                |               | VDL_cmp/merged[12] |                1 |              1 |
+| ~VDL_cmp/merged[44]            |               | iReset_IBUF        |                1 |              1 |
+|                                |               | VDL_cmp/merged[10] |                1 |              1 |
+|                                |               | VDL_cmp/merged[8]  |                1 |              1 |
+|                                |               | VDL_cmp/merged[7]  |                1 |              1 |
+|                                |               | VDL_cmp/merged[9]  |                1 |              1 |
+|                                |               | VDL_cmp/merged[1]  |                1 |              1 |
+|                                |               | VDL_cmp/merged[0]  |                1 |              1 |
+|                                |               | VDL_cmp/merged[25] |                1 |              1 |
+|                                |               | VDL_cmp/merged[24] |                1 |              1 |
+|                                |               | VDL_cmp/merged[21] |                1 |              1 |
+|                                |               | VDL_cmp/merged[20] |                1 |              1 |
+|                                |               | VDL_cmp/merged[18] |                1 |              1 |
+| ~VDL_cmp/merged[14]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[12]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[10]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[8]             |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[0]             |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[24]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[20]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[2]             |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[6]             |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[30]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[26]            |               | iReset_IBUF        |                1 |              1 |
+|  iStop_IBUF                    |               | iReset_IBUF        |                1 |              1 |
+|                                |               | VDL_cmp/merged[15] |                1 |              1 |
+| ~VDL_cmp/merged[4]             |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/luts_31               |               | iReset_IBUF        |                1 |              1 |
+|  iStart_IBUF                   |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[60]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[58]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[50]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[48]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[46]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[56]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[54]            |               | iReset_IBUF        |                1 |              1 |
+| ~VDL_cmp/merged[52]            |               | iReset_IBUF        |                1 |              1 |
+|                                |               | VDL_cmp/merged[36] |                1 |              1 |
+|                                |               | VDL_cmp/merged[53] |                1 |              1 |
+|                                |               | VDL_cmp/merged[52] |                1 |              1 |
+|                                |               | VDL_cmp/merged[45] |                1 |              1 |
+|                                |               | VDL_cmp/merged[44] |                1 |              1 |
+|                                |               | VDL_cmp/merged[43] |                1 |              1 |
+|                                |               | VDL_cmp/merged[42] |                1 |              1 |
+|                                |               | VDL_cmp/merged[41] |                1 |              1 |
+|                                |               | VDL_cmp/merged[51] |                1 |              1 |
+|                                |               | VDL_cmp/merged[40] |                1 |              1 |
+|                                |               | VDL_cmp/merged[39] |                1 |              1 |
+|                                |               | VDL_cmp/merged[38] |                1 |              1 |
+|                                |               | VDL_cmp/merged[37] |                1 |              1 |
+|                                |               | VDL_cmp/merged[54] |                1 |              1 |
+|                                |               | VDL_cmp/merged[35] |                1 |              1 |
+|                                |               | VDL_cmp/merged[34] |                1 |              1 |
+|                                |               | VDL_cmp/merged[33] |                1 |              1 |
+|                                |               | VDL_cmp/merged[19] |                1 |              1 |
+|                                |               | VDL_cmp/merged[23] |                1 |              1 |
+|                                |               | VDL_cmp/merged[22] |                1 |              1 |
+|                                |               | VDL_cmp/merged[31] |                1 |              1 |
+|                                |               | VDL_cmp/merged[32] |                1 |              1 |
+|                                |               | VDL_cmp/merged[29] |                1 |              1 |
+|                                |               | VDL_cmp/merged[28] |                1 |              1 |
+|                                |               | VDL_cmp/merged[17] |                1 |              1 |
+|                                |               | VDL_cmp/merged[16] |                1 |              1 |
+|                                |               | VDL_cmp/merged[58] |                1 |              1 |
+|                                |               | VDL_cmp/merged[6]  |                1 |              1 |
+|                                |               | VDL_cmp/merged[5]  |                1 |              1 |
+|                                |               | VDL_cmp/merged[30] |                1 |              1 |
+|                                |               | VDL_cmp/merged[27] |                1 |              1 |
+|                                |               | VDL_cmp/merged[26] |                1 |              1 |
+|                                |               | VDL_cmp/merged[14] |                1 |              1 |
+|                                |               | VDL_cmp/merged[13] |                1 |              1 |
+|                                |               | VDL_cmp/merged[3]  |                1 |              1 |
+|                                |               | VDL_cmp/merged[4]  |                1 |              1 |
+|                                |               | VDL_cmp/merged[61] |                1 |              1 |
+|                                |               | VDL_cmp/merged[60] |                1 |              1 |
+|                                |               | VDL_cmp/merged[59] |                1 |              1 |
+|                                |               | VDL_cmp/merged[2]  |                1 |              1 |
+|                                |               | VDL_cmp/merged[57] |                1 |              1 |
+|                                |               | VDL_cmp/merged[50] |                1 |              1 |
+|                                |               | VDL_cmp/merged[49] |                1 |              1 |
+|                                |               | VDL_cmp/merged[48] |                1 |              1 |
+|                                |               | VDL_cmp/merged[47] |                1 |              1 |
+|                                |               | VDL_cmp/merged[46] |                1 |              1 |
+|                                |               | VDL_cmp/merged[56] |                1 |              1 |
+|                                |               | VDL_cmp/merged[55] |                1 |              1 |
+|  TermDecoder_VDL_cmp/oData[4]  |               |                    |                2 |              4 |
+|  ThermoDecoderTDL_cmp/oData[5] |               |                    |                2 |              5 |
+|  Mux_exp_cmp/oMux_BUFG[0]      |               | iReset_IBUF        |               16 |             64 |
++--------------------------------+---------------+--------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                    96 |
+| 4      |                     1 |
+| 5      |                     1 |
+| 16+    |                     1 |
++--------+-----------------------+
+
+

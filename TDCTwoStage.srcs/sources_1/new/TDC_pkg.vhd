@@ -34,10 +34,14 @@ use IEEE.NUMERIC_STD.ALL;
 package TDC_pkg is
 
 	-- COMPONENTS
-	constant VDL_LENGTH : integer := 32; -- VDL Length 
-	constant TDL_LENGTH : integer := 8; -- TDL Length 
+	constant DELAY_CELLS: integer := 0;
+	constant VDL_LENGTH : integer := 32 + DELAY_CELLS; -- VDL Length : -12 = 64. First and last 6 cells out for mux synch 
+	constant TDL_LENGTH : integer := 16; -- TDL Length 
+	constant VDL_DATA : integer := 5;
+  	constant TDL_DATA : integer := 5;
 
-	-- MUX
+	attribute dont_touch : string;
+
 
 	--constant	inputsNumber : integer := 8;
 	constant	inputsWidth  : integer := 2;
@@ -47,7 +51,6 @@ package TDC_pkg is
 	type EdgeDetectorType IS array (natural range <>) OF std_logic_vector((2*VDL_LENGTH-3) downto 0); 
 	
 
-
 	component VDL is
 		port (
 			iLatch 	: in std_logic;
@@ -55,13 +58,31 @@ package TDC_pkg is
 	  		iReset  : in std_logic;
 			--oVDL	: out matrix(0 to VDL_LENGTH-2); -- SIM
 			oData	: out std_logic_vector(VDL_LENGTH-1 downto 0); 
-			oVDL    : out std_logic_vector((2*VDL_LENGTH-3) downto 0) -- SIM
+			oVDL    : out std_logic_vector((2*VDL_LENGTH-3) downto 0) --avoiding last 6  delay cells
 			);
 	end component VDL;
 
+	--component ShiftRegister is
+	--	  PORT (
+	--	    D : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+	--	    CLK : IN STD_LOGIC;
+	--	    SCLR : IN STD_LOGIC;
+	--	    Q : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
+	--	  );
+	--end component ShiftRegister;
+
+	--component SRDelayLines is
+	--  Port (
+	--  		iClk 	 : in std_logic;
+	--  		iReset	 : in std_logic;
+	--  		iSRDelay : in std_logic_vector((2*VDL_LENGTH-3) downto 0);
+	--  		oSRDelay : out std_logic_vector((2*VDL_LENGTH-3) downto 0)
+	--  		);
+	--end component SRDelayLines;
+
 	component TermDecoder is
 		port (
-			iData : in std_logic_vector(31 downto 0);
+			iData : in std_logic_vector(VDL_LENGTH-1 downto 0);
 	  		oData : out std_logic_vector(4 downto 0)	
 		);
 	end component TermDecoder;
@@ -86,63 +107,110 @@ package TDC_pkg is
 
 	component ThermoDecoderTDL is
 	  	Port ( 
-	  		iData : in std_logic_vector(31 downto 0); -- (-1) !!!
-	  		oData : out std_logic_vector(4 downto 0)  -- 5 bit = 31 dec
+	  		iData : in std_logic_vector(4*TDL_LENGTH-1 downto 0); -- (-1) !!!
+	  		oData : out std_logic_vector(5 downto 0)  -- 5 bit = 31 dec
 	    );
 	end component ThermoDecoderTDL;
 
-	component EdgeDetector is
-		  Port ( 
-	  		iDetector : in std_logic_vector((2*VDL_LENGTH-3) downto 0);
-	  		oEN 	  : out std_logic
-		  	);
-	end component EdgeDetector;
+	--component CoinDetector is
+	--	  Port ( 
+	--	  		iDetector : in std_logic_vector((2*VDL_LENGTH-3) downto 0);
+	--	  		iReset	  : in std_logic;
+	--	  		oEN 	  : out std_logic
+	--	  	);
+	--end component CoinDetector;
 
-	component BaudGen is
+	component FifoVDL is
 		port (
-			iClk 	: in  STD_LOGIC;
-	        iRst  	: in  STD_LOGIC;
-	        oClk	: out STD_LOGIC
+			clk : IN STD_LOGIC;
+			rst : IN STD_LOGIC;
+			din : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+			wr_en : IN STD_LOGIC;
+			rd_en : IN STD_LOGIC;
+			dout : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+			full : OUT STD_LOGIC;
+			empty : OUT STD_LOGIC
 		);
-	end component BaudGen;
+	end component FifoVDL;
 
-	component Fifo is
-	   generic 
-        (                 
-            N            : integer := 4;                             -- number of address bits for 2**N address locations
-            W            : integer := 21                                -- number of data bits to/from FIFO
-        );         
+	component FifoTDL is
 		port (
-			iClk		: in std_logic;                             -- INPUT global CLK	
-	        iRst_n   	: in std_logic;                             -- INPUT asynchronous, low level active reset signal
-			iPush		: in std_logic;                             -- INPUT fifo push command (pulse)
-			iPop		: in std_logic;	                            -- INPUT fifo pop command (pulse)
-			iInit		: in std_logic;                             -- INPUT fifo initialize command (pulse)
-			iDin		: in std_logic_vector(W-1 downto 0);        -- INPUT fifo input data
-			oDout		: out std_logic_vector(W-1 downto 0);       -- OUTPUT fifo output data
-			oFull		: out std_logic;                            -- OUTPUT fifo full flag
-			oEmpty		: out std_logic;                            -- OUTPUT fifo empty flag
-			oOverFlow   : out std_logic;						    -- OUTPUT indicates when last push operations wasn't done
-			oNoPop		: out std_logic							    -- OUTPUT indicates when last pop operations wasn't done
-			
+			clk : IN STD_LOGIC;
+			rst : IN STD_LOGIC;
+			din : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+			wr_en : IN STD_LOGIC;
+			rd_en : IN STD_LOGIC;
+			dout : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+			full : OUT STD_LOGIC;
+			empty : OUT STD_LOGIC
 		);
-	end component Fifo;
+	end component FifoTDL;
 
+	component clk_wiz_0 is
+		port (
+	        clk_out1  : out std_logic;
+            reset 	  : in std_logic;
+            clk_in1_p : in std_logic;
+            clk_in1_n : in std_logic
+		);
+	end component clk_wiz_0;
 
-	component UartTx is
-		generic(
-	        DBIT 			: integer :=8; -- # data bits
-	        SB_TICK			: integer :=16 -- # ticks for stop bits
-        );
-    	port (
-	        clk, reset 		: in std_logic;
-	        tx_start 		: in std_logic;
-	        s_tick 			: in std_logic;
-	        din 			: in std_logic_vector (7 downto 0);
-	        tx_done_tick 	: out std_logic;
-	        tx 				: out std_logic
-        );
-	end component UartTx;
+	component tUart is
+		generic (
+			baud 		: integer := 115200;
+			clk_rate	: integer := 50000000 --100MHz
+		);  
+		port (
+			data_out	: out std_logic;
+			tx_ready	: out std_logic;
+			start 		: in std_logic;
+			data_in		: in std_logic_vector(4 downto 0);
+			reset 		: in std_logic;
+			clk 		: in std_logic
+		);
+	end component tUart;
+
+	component MuxUart is
+    Port ( 
+    	   iFifoVDL  : in STD_LOGIC_VECTOR (4 downto 0);
+           iFifoTDL  : in STD_LOGIC_VECTOR (4 downto 0);
+           iSel 	 : in STD_LOGIC;
+           oUartData : out STD_LOGIC_VECTOR (4 downto 0)
+          );
+	end component MuxUart;
+
+	component UartModule is
+	  generic (
+	  		VDL_DATA : integer := 5;
+	  		TDL_DATA : integer := 5
+	  	);
+	  Port (iVDL 		: in std_logic_vector(VDL_DATA-1 downto 0);
+	  		iTDL 		: in std_logic_vector(TDL_DATA-1 downto 0);
+	        clk_in1_p 	: in std_logic;
+	        clk_in1_n 	: in std_logic;
+	        iReset		: in std_logic;
+	  		oTx  		: out std_logic
+	  		);
+	end component UartModule;
+
+	component Control is
+	    Port ( 
+	    	iClk		: in std_logic;
+	    	iRst		: in std_logic;
+	    	iVDLFull 	: in std_logic;
+	    	iVDLEmpty	: in std_logic;
+	    	iTDLFull 	: in std_logic;
+	    	iTDLEmpty	: in std_logic;
+	    	iTxReady	: in std_logic;
+	    	oSelMux		: out std_logic;
+	    	oWrEnVDL	: out std_logic;
+	    	oWrEnTDL	: out std_logic;
+	    	oRdEnVDL	: out std_logic;
+	    	oRdEnTDL	: out std_logic;
+	    	oStartTx	: out std_logic;
+	    	oReset		: out std_logic
+	    	);
+	end component Control;
 
 
 end package TDC_pkg;

@@ -28,7 +28,8 @@ entity UartTx is
 	        SB_TICK: integer:=16 -- # ticks for stop bits
         );
     port (
-	        clk, reset: in std_logic;
+	        clk : in std_logic;
+          reset: in std_logic;
 	        tx_start : in std_logic;
 	        s_tick: in std_logic;
 	        din: in std_logic_vector (7 downto 0);

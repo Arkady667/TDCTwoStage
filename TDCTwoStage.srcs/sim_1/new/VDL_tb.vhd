@@ -39,7 +39,7 @@ end VDL_tb;
 
 architecture Behavioral of VDL_tb is
 
-		constant LENGTH : integer := 32;
+		constant LENGTH : integer := 64;
 
 		signal	iLatch 	:  std_logic;
 	  	signal	iLut	:  std_logic;

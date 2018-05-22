@@ -1,0 +1,394 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Tue May 22 20:34:25 2018
+| Host         : hal running 64-bit Ubuntu 16.04.4 LTS
+| Command      : report_timing_summary -warn_on_violation -max_paths 10 -file TDC_timing_summary_routed.rpt -rpx TDC_timing_summary_routed.rpx
+| Design       : TDC
+| Device       : 7vx485t-ffg1761
+| Speed File   : -2  PRODUCTION 1.12 2014-09-11
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There is 1 register/latch pin with no clock driven by root clock pin: iStart (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: iStop (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: REG_SP/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: TDL_cmp/REG_TAPS[31].REG/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: TDL_cmp/REG_TAPS[32].REG/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: TDL_cmp/REG_TAPS[33].REG/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[0].LATCH_init.LATCH_first/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[10].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[11].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[12].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[13].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[14].LATCH_next.LATCH/Q (HIGH)
+
+ There are 68 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[15].LATCH_next.LATCH/Q (HIGH)
+
+ There are 68 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[16].LATCH_next.LATCH/Q (HIGH)
+
+ There are 68 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[17].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[18].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[19].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[1].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[20].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[21].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[22].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[23].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[24].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[25].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[26].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[27].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[28].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[29].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[2].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[30].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[31].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[3].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[4].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[5].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[6].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[7].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[8].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/LATCH_TAPS[9].LATCH_next.LATCH/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[0].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[10].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[12].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[14].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[16].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[18].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[20].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[22].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[24].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[26].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[28].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[2].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[30].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[32].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[34].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[36].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[38].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[40].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[42].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[44].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[46].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[48].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[4].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[50].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[52].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[54].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[56].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[58].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[60].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[6].REG_cmp/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: VDL_cmp/OUT_REG[8].REG_cmp/Q (HIGH)
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 202 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 62 pins that are not constrained for maximum delay due to constant clock. (MEDIUM)
+
+
+5. checking no_input_delay
+--------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 11 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.387        0.000                      0                    2           NA           NA                     NA                   NA           NA           NA                      NA                    NA  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock     Waveform(ns)         Period(ns)      Frequency(MHz)
+-----     ------------         ----------      --------------
+VirInClk  {0.000 2.500}        5.000           200.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**default**                                     0.387        0.000                      0                    2                                                                        
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **default**
+From Clock:  
+  To Clock:  
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.387ns,  Total Violation        0.000ns
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.387ns  (required time - arrival time)
+  Source:                 VDL_cmp/LATCH_TAPS[19].LATCH_next.LATCH/Q
+                            (internal pin)
+  Destination:            Mux_exp_cmp/oMux[0]_INST_0/O
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            2.000ns  (MaxDelay Path 2.000ns)
+  Data Path Delay:        1.613ns  (logic 0.129ns (7.998%)  route 1.484ns (92.002%))
+  Logic Levels:           3  (LUT4=1 LUT5=1 LUT6=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 2.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y10         LDCE                         0.000     0.000 r  VDL_cmp/LATCH_TAPS[19].LATCH_next.LATCH/Q
+                         net (fo=10, routed)          0.852     0.852    Mux_exp_cmp/iSel[19]
+    SLICE_X42Y3          LUT5 (Prop_lut5_I0_O)        0.043     0.895 r  Mux_exp_cmp/oMux[0]_INST_0_i_16/O
+                         net (fo=1, routed)           0.450     1.345    Mux_exp_cmp/oMux[0]_INST_0_i_16_n_0
+    SLICE_X47Y3          LUT4 (Prop_lut4_I2_O)        0.043     1.388 r  Mux_exp_cmp/oMux[0]_INST_0_i_6/O
+                         net (fo=1, routed)           0.181     1.570    Mux_exp_cmp/oMux[0]_INST_0_i_6_n_0
+    SLICE_X45Y3          LUT6 (Prop_lut6_I5_O)        0.043     1.613 r  Mux_exp_cmp/oMux[0]_INST_0/O
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    2.000     2.000    
+    SLICE_X45Y3          LUT6                         0.000     2.000    Mux_exp_cmp/oMux[0]_INST_0
+                         output delay                -0.000     2.000    
+  -------------------------------------------------------------------
+                         required time                          2.000    
+                         arrival time                          -1.613    
+  -------------------------------------------------------------------
+                         slack                                  0.387    
+
+Slack (MET) :             0.406ns  (required time - arrival time)
+  Source:                 VDL_cmp/LATCH_TAPS[6].LATCH_next.LATCH/Q
+                            (internal pin)
+  Destination:            Mux_exp_cmp/oMux[1]_INST_0/O
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            2.000ns  (MaxDelay Path 2.000ns)
+  Data Path Delay:        1.594ns  (logic 0.129ns (8.093%)  route 1.465ns (91.907%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 2.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y7          LDCE                         0.000     0.000 r  VDL_cmp/LATCH_TAPS[6].LATCH_next.LATCH/Q
+                         net (fo=8, routed)           0.741     0.741    Mux_exp_cmp/iSel[6]
+    SLICE_X46Y3          LUT5 (Prop_lut5_I2_O)        0.043     0.784 r  Mux_exp_cmp/oMux[1]_INST_0_i_10/O
+                         net (fo=1, routed)           0.179     0.963    Mux_exp_cmp/oMux[1]_INST_0_i_10_n_0
+    SLICE_X45Y3          LUT6 (Prop_lut6_I5_O)        0.043     1.006 r  Mux_exp_cmp/oMux[1]_INST_0_i_4/O
+                         net (fo=1, routed)           0.545     1.551    Mux_exp_cmp/oMux[1]_INST_0_i_4_n_0
+    SLICE_X47Y3          LUT6 (Prop_lut6_I3_O)        0.043     1.594 r  Mux_exp_cmp/oMux[1]_INST_0/O
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    2.000     2.000    
+    SLICE_X47Y3          LUT6                         0.000     2.000    Mux_exp_cmp/oMux[1]_INST_0
+                         output delay                -0.000     2.000    
+  -------------------------------------------------------------------
+                         required time                          2.000    
+                         arrival time                          -1.594    
+  -------------------------------------------------------------------
+                         slack                                  0.406    
+
+
+
+
+

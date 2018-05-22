@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../../TDCTwoStage.srcs/sim_1/imports/new/TDC_pkg.vhd"
+vhdl xil_defaultlib  "../../../../TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd"
+vhdl xil_defaultlib  "../../../../TDCTwoStage.srcs/sim_1/new/ThermoVDL_tb.vhd"
+vhdl xil_defaultlib  "../../../../TDCTwoStage.srcs/sim_1/new/Control_tb.vhd"
+
+# Do not sort compile order
+nosort

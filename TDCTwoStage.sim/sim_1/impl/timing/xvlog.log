@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.sim/sim_1/impl/timing/TDC_tb_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LutDelayLine
+INFO: [VRFC 10-311] analyzing module Mux_exp
+INFO: [VRFC 10-311] analyzing module TDC
+INFO: [VRFC 10-311] analyzing module TDL
+INFO: [VRFC 10-311] analyzing module TermDecoder
+INFO: [VRFC 10-311] analyzing module ThermoDecoderTDL
+INFO: [VRFC 10-311] analyzing module VDL
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module LutDelayLine_c_shift_ram_v12_0_10
+INFO: [VRFC 10-311] analyzing module LutDelayLine_c_shift_ram_v12_0_10_legacy
+INFO: [VRFC 10-311] analyzing module LutDelayLine_c_shift_ram_v12_0_10_viv
+INFO: [VRFC 10-311] analyzing module glbl

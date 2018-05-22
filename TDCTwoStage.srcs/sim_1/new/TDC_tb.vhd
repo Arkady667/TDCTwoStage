@@ -38,19 +38,30 @@ end TDC_tb;
 
 architecture Behavioral of TDC_tb is
 
+	signal Clk			:  std_logic;
 	signal iStart 		:  std_logic;
 	signal iStop		:  std_logic;
 	signal iReset		:  std_logic;
 	-- decoder outputs
 	signal oVDL			:  std_logic_vector(4 downto 0); 
-	signal oTDL			:  std_logic_vector(4 downto 0);
+	signal oTDL			:  std_logic_vector(5 downto 0);
+
+	constant PERIOD : integer := 10; 
 
 begin
+
+	P_ClkP : process
+    begin
+        Clk <= '1';
+        wait for (PERIOD / 2) * ns;
+        Clk <= '0';
+        wait for (PERIOD / 2) * ns;
+    end process;
 
 	P_STIM: process 
 		begin
 		     --init
-
+		    iReset <= '0';
 		    iStart <= '0';
 	        iStop <= '0';
 	        wait for 2 ns;
@@ -59,14 +70,15 @@ begin
 	        iStart <= '1';
 	        
 	        --Stop
-	        wait for 2 ns;  --TI
+	        wait for 500 ps;  --TI
 	        iStop <= '1';
 
 	        --Reset
 	        wait for 10 ns;
+	        --iReset <= '1';
+	        wait for 70 ns;
 	        iReset <= '1';
-	        wait for 5 ns;
-	       	iReset <= '0';
+	       	
 		    
 	        --end
 	        wait for 30 ns;
@@ -78,6 +90,7 @@ begin
 
 	I_DUT: entity xil_defaultlib.TDC
 		port map(
+			Clk		=> Clk,
 			iStart 	=> iStart,
 			iStop	=> iStop,
 			iReset 	=> iReset,

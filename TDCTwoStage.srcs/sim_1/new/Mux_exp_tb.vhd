@@ -40,10 +40,10 @@ end Mux_exp_tb;
 
 architecture Behavioral of Mux_exp_tb is
 
-	----PORTS
-	--signal iMux :  std_logic_vector((2*VDL_LENGTH-3) downto 0);
- -- 	signal iSel :  std_logic_vector(VDL_LENGTH-1 downto 0);
- -- 	signal oMux :  std_logic_vector(1 downto 0);
+	--PORTS
+	signal iMux :  std_logic_vector((2*VDL_LENGTH-3) downto 0);
+  	signal iSel :  std_logic_vector(VDL_LENGTH-1 downto 0);
+  	signal oMux :  std_logic_vector(1 downto 0);
 
 	----CLK
  --   signal Clk 			: std_logic;
@@ -59,11 +59,11 @@ architecture Behavioral of Mux_exp_tb is
     --) 
     --is
     --	begin
-    --		--inputData(TiInput)(0) := '1';--startSignal;
-    --		----wait for 1 ns;
-    --		--inputData(TiInput)(1) := '1';--stopSignal;
+    --		inputData(TiInput)(0) := '1';--startSignal;
+    --		wait for 1 ns;
+    --		inputData(TiInput)(1) := '1';--stopSignal;
 
-    --		inputData := (TiInput downto TiInput-1 => "11", others => "01");
+    --		--inputData := (TiInput downto TiInput-1 => "11", others => "01");
 
     --end procedure timeInterval;
     
@@ -73,61 +73,89 @@ begin
 
 	-- SIM PROCESS
 
-	--P_MAIN: process
- -- 			variable inputTI : std_logic_vector((2*VDL_LENGTH-3) downto 0);
-	--	begin
-	--		iSel <= "11111000";
-	--		wait for 5 ns; 
-	--		timeInterval(inputTI,4);
-	--		iMux <= inputTI;
-	--		wait for 2 ns;
+	P_MAIN: process
+  			--variable inputTI : std_logic_vector((2*VDL_LENGTH-3) downto 0);
+		begin
+			iSel <= "00000000000000000000000000000000";
+			wait for 20 ns;
 
-	--		iSel <= "11100000";
-	--		timeInterval(inputTI,4);
-	--		iMux <= inputTI;
-	--		wait for 2 ns;
 
-	--		iSel <= "11111100";
-	--		timeInterval(inputTI,5);
-	--		iMux <= inputTI;
-	--		wait for 2 ns;
 
-	--		iSel <= "11100000";
-	--		timeInterval(inputTI,2);
-	--		iMux <= inputTI;
-	--		wait for 2 ns;
+			iSel <= "00000000000000000000000001111111";
+			wait for 10 ns; 
 
-	--		iSel <= "11111000";
-	--		timeInterval(inputTI,2);
-	--		iMux <= inputTI;
-	--		wait for 2 ns;
+			iSel <= "00000000000000000000000111111111";
+			wait for 2 ns;
+			iMux(17) <= '1';
+			wait for 1 ns;
+			iMux(16) <= '1';
+			wait for 2 ns;
+			iSel <= "00000000000000000000011111111111";
+			wait for 20 ns;
 
-	--		iSel <= "11111110";
-	--		timeInterval(inputTI,6);
-	--		iMux <= inputTI;
-	--		wait for 2 ns;
+			assert false report "end of simulation" severity failure;
+			--wait for 2 ns; 
+			--iSel <= "000000000111";
+			--wait for 2 ns; 
+			--iSel <= "000000001111";
+			--wait for 2 ns; 
+			--iSel <= "000000011111";
+			--wait for 2 ns; 
+
+
+
+			--timeInterval(inputTI,4);
+			--iMux <= inputTI;
+			--wait for 2 ns;
+
+
+
+			--iSel <= "11100000";
+			--timeInterval(inputTI,4);
+			--iMux <= inputTI;
+			--wait for 2 ns;
+
+			--iSel <= "11111100";
+			--timeInterval(inputTI,5);
+			--iMux <= inputTI;
+			--wait for 2 ns;
+
+			--iSel <= "11100000";
+			--timeInterval(inputTI,2);
+			--iMux <= inputTI;
+			--wait for 2 ns;
+
+			--iSel <= "11111000";
+			--timeInterval(inputTI,2);
+			--iMux <= inputTI;
+			--wait for 2 ns;
+
+			--iSel <= "11111110";
+			--timeInterval(inputTI,6);
+			--iMux <= inputTI;
+			--wait for 2 ns;
 			
-	--		iSel <= "10000000";
-	--		timeInterval(inputTI,0);
-	--		iMux <= inputTI;
-	--		wait for 2 ns;
+			--iSel <= "10000000";
+			--timeInterval(inputTI,0);
+			--iMux <= inputTI;
+			--wait for 2 ns;
 			
-	--		iSel <= "11000000";
-	--		timeInterval(inputTI,0);
-	--		iMux <= inputTI;
-	--		wait for 2 ns;
+			--iSel <= "11000000";
+			--timeInterval(inputTI,0);
+			--iMux <= inputTI;
+			--wait for 2 ns;
 			
 
-	--end process;
+	end process;
 
 
-	----DUT
+	--DUT
 
-	--I_DUT: entity xil_defaultlib.Mux_exp
-	--	port map(
-	--		iMux 	=> iMux,
-	--	    iSel 	=> iSel,
-	--	    oMux 	=> oMux
-	--	);
+	I_DUT: entity xil_defaultlib.Mux_exp
+		port map(
+			iMux 	=> iMux,
+		    iSel 	=> iSel,
+		    oMux 	=> oMux
+		);
 
 end Behavioral;

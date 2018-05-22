@@ -9,4 +9,4 @@ then
 exit $RETVAL
 fi
 }
-ExecStep $xv_path/bin/xsim VDL_tb_behav -key {Behavioral:sim_1:Functional:VDL_tb} -tclbatch VDL_tb.tcl -log simulate.log
+ExecStep $xv_path/bin/xsim tUART_sim_behav -key {Behavioral:sim_1:Functional:tUART_sim} -tclbatch tUART_sim.tcl -log simulate.log

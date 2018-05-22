@@ -1,0 +1,22 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.sim/sim_1/impl/timing/TDC_tb_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LutDelayLine
+INFO: [VRFC 10-311] analyzing module Mux_exp
+INFO: [VRFC 10-311] analyzing module TDC
+INFO: [VRFC 10-311] analyzing module TDL
+INFO: [VRFC 10-311] analyzing module TermDecoder
+INFO: [VRFC 10-311] analyzing module ThermoDecoderTDL
+INFO: [VRFC 10-311] analyzing module VDL
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module LutDelayLine_c_shift_ram_v12_0_10
+INFO: [VRFC 10-311] analyzing module LutDelayLine_c_shift_ram_v12_0_10_legacy
+INFO: [VRFC 10-311] analyzing module LutDelayLine_c_shift_ram_v12_0_10_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/imports/new/TDC_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TDC_tb
+ERROR: [VRFC 10-704] formal clk_in1_n has no actual or default value [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd:79]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd:39]
+INFO: [VRFC 10-240] VHDL file /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/ThermoVDL_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/Control_tb.vhd" into library xil_defaultlib

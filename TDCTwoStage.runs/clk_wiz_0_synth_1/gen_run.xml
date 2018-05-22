@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="clk_wiz_0_synth_1" LaunchPart="xc7vx485tffg1761-2" LaunchTime="1525858613">
-  <File Type="RDS-DCP" Name="clk_wiz_0.dcp"/>
+<GenRun Id="clk_wiz_0_synth_1" LaunchPart="xc7vx485tffg1761-2" LaunchTime="1526474966">
+  <File Type="RDS-UTIL" Name="clk_wiz_0_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="clk_wiz_0_drc_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="clk_wiz_0_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="clk_wiz_0.dcp"/>
   <File Type="VDS-TIMINGSUMMARY" Name="clk_wiz_0_timing_summary_synth.rpt"/>
   <File Type="VDS-TIMING-PB" Name="clk_wiz_0_timing_summary_synth.pb"/>
   <File Type="RDS-RDS" Name="clk_wiz_0.vds"/>
   <File Type="PA-TCL" Name="clk_wiz_0.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="clk_wiz_0_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="clk_wiz_0_utilization_synth.rpt"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clk_wiz_0">
-    <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
+    <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -22,7 +22,7 @@
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clk_wiz_0">
-    <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
+    <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
