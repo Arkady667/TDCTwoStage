@@ -1,10 +1,4 @@
--------------------------------------------------------------------------------
---	FILE:			tUART.vhd
---
---	DESCRIPTION:	This design is used to implement a UART transmitter.
---
--- 	ENGINEER:		Jordan Christman
--------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all;
@@ -17,9 +11,10 @@ port (
 	data_out	: out std_logic;
 	tx_ready	: out std_logic;
 	start 		: in std_logic;
-	data_in		: in std_logic_vector(4 downto 0);
+	data_in		: in std_logic_vector(5 downto 0);
 	reset 		: in std_logic;
-	clk 		: in std_logic
+	clk 		: in std_logic;
+	oRstCtrl	: out std_logic
 	);
 end tUART;
 
@@ -28,7 +23,7 @@ architecture behavior of tUART is
 constant clk_freq				: integer := clk_rate;
 constant max_clk_count			: integer := clk_freq / baud;
 constant max_clk_count_delay	: integer := clk_freq / 19200; -- creates a 52uS delay between character transmissions
-constant max_bits 				: integer := 7;
+constant max_bits 				: integer := 8;
 
 -- signals used for counters
 signal clk_counter 				: integer range 0 to max_clk_count;
@@ -41,7 +36,7 @@ signal start_count_follow		: std_logic := '0';
 signal start_trans				: std_logic := '0';
 
 -- signal used for UART shift register
-signal data_reg 				: std_logic_vector(6 downto 0) := (others => '1');
+signal data_reg 				: std_logic_vector(7 downto 0) := (others => '1');
 
 -- control signals
 signal shift_data				: std_logic := '0';
@@ -65,8 +60,9 @@ begin
 	state_proc: process(clk)
 		begin
 		if rising_edge(clk) then
-			if(reset = '0') then
+			if(reset = '1') then --bylo 0!!!!!!!!!!!! jaby co
 				state <= init;
+				oRstCtrl <= '1';
 			else
 				state <= nxt_state;
 			end if;
@@ -79,6 +75,7 @@ begin
 	-- Step Two
 	nxt_state_proc: process(state, start_trans, done_shifting, delay_clock_done)
 	begin
+		--delay_clock <= '0'; -- add by my to get rid of latch
 		nxt_state <= state;
 		--shift_data <= '0';
 		--done_shifting <='0';
@@ -128,7 +125,7 @@ begin
 	begin_trans_proc: process(clk)
 	begin
 		if(rising_edge(clk)) then
-			if(reset = '0') then
+			if(reset = '1') then
 				start_count_lead <= '0';
 				start_count_follow <= '0';
 			else
@@ -149,7 +146,7 @@ begin
 	count_bits_proc: process(clk)
 	begin
 		if(rising_edge(clk)) then
-			if(reset = '0') then
+			if(reset = '1') then
 				number_bits <= 0;
 			elsif(number_bits = max_bits) then
 				done_shifting <= '1';
@@ -158,7 +155,7 @@ begin
 				data_reg <= '1' & data_in & '0';
 				done_shifting <= '0';
 			elsif(shift_data = '1') then
-				data_reg <= '1' & data_reg(6 downto 1);
+				data_reg <= '1' & data_reg(7 downto 1);
 				number_bits <= number_bits + 1;
 			end if;
 		end if;

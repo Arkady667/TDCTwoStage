@@ -40,14 +40,13 @@ end UartModule_tb;
 architecture Behavioral of UartModule_tb is
 
 	constant VDL_DATA : integer := 5;
-  	constant TDL_DATA : integer := 5;
-	constant PERIOD_P : integer := 10; 
-	constant PERIOD_N : integer := 10; 
+  	constant TDL_DATA : integer := 6;
+	constant PERIOD	  : integer := 10; 
 
 	signal iVDL 		: std_logic_vector(VDL_DATA-1 downto 0):="00000";
-  	signal iTDL 		: std_logic_vector(TDL_DATA-1 downto 0):="00000";
-    signal clk_in1_p 	: std_logic;
-    signal clk_in1_n 	: std_logic;
+  	signal iTDL 		: std_logic_vector(TDL_DATA-1 downto 0):="000000";
+    signal iClk		 	: std_logic;
+    --signal clk_in1_n 	: std_logic;
     signal iReset		: std_logic;
   	signal oTx  		: std_logic;
 
@@ -56,18 +55,10 @@ begin
 	
     P_ClkP : process
     begin
-        clk_in1_p <= '0';
-        wait for (PERIOD_P / 2) * ns;
-        clk_in1_p <= '1';
-        wait for (PERIOD_P / 2) * ns;
-    end process;
-
-    P_ClkN : process
-    begin
-        clk_in1_n <= '1';
-        wait for (PERIOD_N / 2) * ns;
-        clk_in1_n <= '0';
-        wait for (PERIOD_N / 2) * ns;
+        iClk <= '0';
+        wait for (PERIOD / 2) * ns;
+        iClk <= '1';
+        wait for (PERIOD / 2) * ns;
     end process;
 
 
@@ -92,22 +83,49 @@ begin
 	  		Data := std_logic_vector(to_unsigned(DataValue, Data'length));
 	  	end VDLFifoData;
 
-	  	variable iData : std_logic_vector(VDL_DATA-1 downto 0);
+	  	procedure TDLFifoData (
+			--iData : std_logic_vector(4 downto 0);  	
+			Data : out std_logic_vector(TDL_DATA-1 downto 0);
+			constant DataValue : integer := 0
+	  	) is
+	  		variable DataPulsOne : integer :=0;
+	  	begin
+	  		DataPulsOne := DataValue*2;
+	  		Data := std_logic_vector(to_unsigned(DataPulsOne, Data'length));
+	  	end TDLFifoData;
+
+	  	variable iDataVDL : std_logic_vector(VDL_DATA-1 downto 0);
+	  	variable iDataTDL : std_logic_vector(TDL_DATA-1 downto 0);
+	  	variable sim 	  : integer := 0;
 
 	begin
 		--init
+		--iReset <= '1';
+		wait for 5 ns;
 		iVDL <= "00000";
-		iTDL <= "00000";
+		iTDL <= "000000";
 		iReset <= '0';
 		wait for 10 ns;
 
-		VDLFifoData(iData, 5);
-		iVDL <= iData;
+		-- filling FIFOs
 
-		wait for 100 ns;
+		for i in 1 to 20 loop 
+			VDLFifoData(iDataVDL, i);
+			iVDL <= iDataVDL;
+			TDLFifoData(iDataTDL, i); -- +1
+			iTDL <= iDataTDL;
+			wait for 10 ns;
+		end loop;
 
+		wait for 3 ms;
+		--iReset <= '1';
 
-		assert false report "end of simulation" severity failure;
+		wait for 0.3 ms;
+		--sim := sim + 1;
+
+		--if (sim = 2) then		
+			--assert false report "end of simulation" severity failure;
+		--end if;
 
 	end process;
 
@@ -119,8 +137,7 @@ begin
 		port map(
 			iVDL		=> iVDL,
 			iTDL		=> iTDL,
-			clk_in1_p	=> clk_in1_p,
-			clk_in1_n	=> clk_in1_n,
+			iClk		=> iClk,
 			iReset		=> iReset,
 			oTx 		=> oTx
 		);

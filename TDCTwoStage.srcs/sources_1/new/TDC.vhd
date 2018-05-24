@@ -165,8 +165,8 @@ begin
 
 	--Mux out conversion to std_logic
 
-	oMuxStop <= oMuxData(0);
-	oMuxStart  <= oMuxData(1);
+	oMuxStop  <= oMuxData(1);
+	oMuxStart <= oMuxData(0);
 
 	--Components 
 

@@ -9,4 +9,4 @@ then
 exit $RETVAL
 fi
 }
-ExecStep $xv_path/bin/xsim TDC_tb_func_synth -key {Post-Synthesis:sim_1:Functional:TDC_tb} -tclbatch TDC_tb.tcl -log simulate.log
+ExecStep $xv_path/bin/xsim UartModule_tb_func_synth -key {Post-Synthesis:sim_1:Functional:UartModule_tb} -tclbatch UartModule_tb.tcl -log simulate.log

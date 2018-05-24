@@ -70,7 +70,7 @@ begin
 	        iStart <= '1';
 	        
 	        --Stop
-	        wait for 500 ps;  --TI
+	        wait for 1.5 ns;  --TI
 	        iStop <= '1';
 
 	        --Reset

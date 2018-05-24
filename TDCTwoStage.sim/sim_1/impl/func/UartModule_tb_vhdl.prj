@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "UartModule_tb_func_impl.vhd"
+vhdl xil_defaultlib  "../../../../TDCTwoStage.srcs/sim_1/imports/new/TDC_pkg.vhd"
+vhdl xil_defaultlib  "../../../../TDCTwoStage.srcs/sim_1/new/UartModule_tb.vhd"
+
+# Do not sort compile order
+nosort

@@ -37,12 +37,12 @@ library xil_defaultlib;
 entity UartModule is
   generic (
   		VDL_DATA : integer := 5;
-  		TDL_DATA : integer := 5
+  		TDL_DATA : integer := 6
   	);
   Port (
   		iVDL 		: in std_logic_vector(VDL_DATA-1 downto 0):="00000";
-  		iTDL 		: in std_logic_vector(TDL_DATA-1 downto 0):="00000";
-        iClk 	: in std_logic;
+  		iTDL 		: in std_logic_vector(TDL_DATA-1 downto 0):="000000";
+        iClk 		: in std_logic;
         iReset		: in std_logic;
   		oTx  		: out std_logic
   		);
@@ -55,7 +55,7 @@ architecture Behavioral of UartModule is
 
 	--Fifo signal
 	signal iVDLData : std_logic_vector(VDL_DATA-1 downto 0):="00000";
-	signal iTDLData : std_logic_vector(VDL_DATA-1 downto 0):="00000";
+	signal iTDLData : std_logic_vector(TDL_DATA-1 downto 0):="000000";
 
 	signal oFifoVDLData : std_logic_vector(VDL_DATA-1 downto 0);
 	signal oFifoTDLData : std_logic_vector(TDL_DATA-1 downto 0);
@@ -78,10 +78,15 @@ architecture Behavioral of UartModule is
 
 	--MUX signals
 	signal iSelect		: std_logic; 
-	signal iUartData 	: std_logic_vector(VDL_DATA-1 downto 0);
+	signal iUartData 	: std_logic_vector(TDL_DATA-1 downto 0);
 
 	--Control signals
-	signal ControlReset: std_logic;
+	signal ControlReset : std_logic;
+	signal RstCtrl 		: std_logic;
+
+	--Synchronizators signals
+	signal oSynchVDL : std_logic_vector(4 downto 0);
+	signal oSynchTDL : std_logic_vector(5 downto 0);
 
 
 	attribute keep_hierarchy : string;
@@ -108,10 +113,36 @@ begin
 	iTDLData <= iTDL;
 	--iFifoData <= iVDL & iTDL;
 
+	--iVDLData(5) <= '0'; -- constant 0 cause ony 5 bits of data are comming from VDL Decoder
+
+
+	--Clk_cmp: clk_wiz_0 port map (
+	--	clk_out1 	=> Clk,
+	--	reset 	  	=> iReset,
+	--	clk_in1_p	=> clk_in1_p,
+	--	clk_in1_n	=> clk_in1_n
+	--);
+
+	SynchVDL_cmp: SynchVDL port map(
+			D 	 	=> iVDLData,
+			CLK 	=> iClk,
+			SCLR	=> ControlReset,
+			Q 		=> oSynchVDL
+		);
+
+
+	SynchTDL_cmp: SynchTDL port map(
+			D 	 	=> iTDLData,
+			CLK 	=> iClk,
+			SCLR	=> ControlReset,
+			Q 		=> oSynchTDL
+		);
+
+
 	FifoVDL_cmp: FifoVDL port map (
 			clk  	=> iClk,
 			rst 	=> ControlReset,
-			din 	=> iVDLData,
+			din 	=> oSynchVDL,
 			wr_en 	=> WrEnVDL,		--control 
 			rd_en 	=> RdEnVDL,		--control
 			dout 	=> oFifoVDLData,
@@ -122,7 +153,7 @@ begin
 	FifoTDL_cmp: FifoTDL port map (
 			clk  	=> iClk,
 			rst 	=> ControlReset,
-			din 	=> iTDLData,
+			din 	=> oSynchTDL,
 			wr_en 	=> WrEnTDL, 	--control 
 			rd_en 	=> RdEnTDL, 	--control 
 			dout 	=> oFifoTDLData,
@@ -137,7 +168,8 @@ begin
 			start 		=> startTx, -- control
 			data_in		=> iUartData,
 			reset 		=> ControlReset,
-			clk 		=> iClk
+			clk 		=> iClk,
+			oRstCtrl	=> RstCtrl
 
 		);	
 
@@ -151,7 +183,7 @@ begin
 
 	Control_cmp: Control port map(
 			iClk		=> iClk,
-	    	iRst		=> iReset, 
+	    	iRst		=> RstCtrl, 
 	    	iVDLFull 	=> VDLFull,
 	    	iVDLEmpty	=> VDLEmpty,
 	    	iTDLFull 	=> TDLFull,

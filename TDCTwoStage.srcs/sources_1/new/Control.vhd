@@ -43,11 +43,11 @@ entity Control is
     	iTDLFull 	: in std_logic;
     	iTDLEmpty	: in std_logic;
     	iTxReady	: in std_logic;
-    	oSelMux		: out std_logic; 
-    	oWrEnVDL	: out std_logic;
-    	oWrEnTDL	: out std_logic;
-    	oRdEnVDL	: out std_logic;
-    	oRdEnTDL	: out std_logic;
+    	oSelMux		: out std_logic:='1'; 
+    	oWrEnVDL	: out std_logic:='0';
+    	oWrEnTDL	: out std_logic:='0';
+    	oRdEnVDL	: out std_logic:='0';
+    	oRdEnTDL	: out std_logic:='0';
     	oStartTx	: out std_logic;
     	oReset		: out std_logic
     	);
@@ -66,6 +66,9 @@ architecture Behavioral of Control is
 		selMux 		: std_logic;
 		startTx 	: std_logic;
 		reset 		: std_logic;
+		i 			: std_logic;
+		j			: std_logic;
+		k			: std_logic;
 	end record;
 
 	signal r, rin : reg_type;
@@ -92,14 +95,21 @@ begin
 
 
 	P_COMB: process(iVDLFull, iTDLFull, iTDLEmpty, iVDLEmpty, iTxReady, r)
-		variable v : reg_type;
+		variable v 		: reg_type;
+		variable i 		: reg_type;
+		variable j		: reg_type;
+		variable k		: reg_type;
+		--variable waitCycle 	: integer :=0;
 	begin
 		v := r;
 
 		--default
-		v.WrEnVDL := '0';
-		v.WrEnTDL := '0';
-		v.selMux  := '1';
+		v.i := '0';
+		v.j := '0';
+		v.k := '0';
+		--v.WrEnVDL := '0';
+		--v.WrEnTDL := '0';
+		--v.selMux  := '1';
 		--v.RdEnTDL := '0';	
 		--v.RdEnVDL := '0';	
 
@@ -108,43 +118,55 @@ begin
 				if (iVDLEmpty = '1' and iTDLEmpty = '1') then
 					v.WrEnVDL := '1';
 					v.WrEnTDL := '1';
+					v.i := '0';
 					v.state := stWrite;
 				else
 					v.state := stInit;
 				end if;
-			when stWrite =>
-				if (iVDLFull = '1' and iTDLFull = '0') then
+			when stWrite =>					-- filling fifos wr = 1
+				--waitCycle := waitCycle + 1;
+				if (iVDLFull = '1' and iVDLEmpty = '0') then
 					v.WrEnVDL := '0';
+					v.i := '1';
+				end if;
+				if (iTDLFull = '1' and iTDLEmpty = '0' and r.i = '1') then
 					v.WrEnTDL := '0';
 					v.state := stReadVDL;
+					v.i := '0';
 				else
 					v.state := stWrite;
 				end if;
 			when stReadVDL =>
 				v.selMux := '1';
-				v.RdEnVDL := '1';
-				if (iTxReady = '1') then
-					v.startTx := '1';
+				if (iTxReady = '1' and r.j = '0') then
 					if (iVDLEmpty = '0') then
+						v.startTx := '1';
+						v.RdEnVDL := '1';
+						v.j := '1';
 						v.state := stReadVDL;
 					else
 						v.state := stReadTDL;
 					end if;
+				--elsif (iTxReady = '0' and r.j := '0') then
+					
 				else
+					v.j := '0';
 					v.startTx := '0';
 					v.RdEnVDL := '0';	
 				end if;
 			when stReadTDL =>
 				v.selMux := '0';
-				v.RdEnTDL := '1';
-				if (iTxReady = '1') then
-					v.startTx := '1';
+				if (iTxReady = '1' and r.k = '0') then
 					if (iTDLEmpty = '0') then
+						v.startTx := '1';
+						v.RdEnTDL := '1';
+						v.k := '1';
 						v.state := stReadTDL;
 					else
 						v.state := stEndTx;
 					end if;
 				else
+					v.k := '0';
 					v.startTx := '0';
 					v.RdEnTDL := '0';	
 				end if;

@@ -33,18 +33,23 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity MuxUart is
     Port ( iFifoVDL  : in STD_LOGIC_VECTOR (4 downto 0);
-           iFifoTDL  : in STD_LOGIC_VECTOR (4 downto 0);
+           iFifoTDL  : in STD_LOGIC_VECTOR (5 downto 0);
            iSel 	 : in STD_LOGIC;
-           oUartData : out STD_LOGIC_VECTOR (4 downto 0)
+           oUartData : out STD_LOGIC_VECTOR (5 downto 0)
           );
 end MuxUart;
 
 architecture Behavioral of MuxUart is
 
+	signal iFifoVDLwithZero : STD_LOGIC_VECTOR(5 downto 0);
+
 begin
+	
+	iFifoVDLwithZero(4 downto 0) <= iFifoVDL;
+	iFifoVDLwithZero(5) <= '0'; 
 
 	with iSel select
-		oUartData <= iFifoVDL when '1',
+		oUartData <= iFifoVDLwithZero when '1',
 					 iFifoTDL when '0';
 
 

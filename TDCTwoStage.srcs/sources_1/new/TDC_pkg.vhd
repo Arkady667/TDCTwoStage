@@ -62,23 +62,24 @@ package TDC_pkg is
 			);
 	end component VDL;
 
-	--component ShiftRegister is
-	--	  PORT (
-	--	    D : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-	--	    CLK : IN STD_LOGIC;
-	--	    SCLR : IN STD_LOGIC;
-	--	    Q : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
-	--	  );
-	--end component ShiftRegister;
+	component SynchVDL is
+		  PORT (
+		    D : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+		    CLK : IN STD_LOGIC;
+		    SCLR : IN STD_LOGIC;
+		    Q : OUT STD_LOGIC_VECTOR(4 DOWNTO 0)
+		  );
+	end component SynchVDL;
 
-	--component SRDelayLines is
-	--  Port (
-	--  		iClk 	 : in std_logic;
-	--  		iReset	 : in std_logic;
-	--  		iSRDelay : in std_logic_vector((2*VDL_LENGTH-3) downto 0);
-	--  		oSRDelay : out std_logic_vector((2*VDL_LENGTH-3) downto 0)
-	--  		);
-	--end component SRDelayLines;
+	component SynchTDL is
+		  PORT (
+		    D : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+		    CLK : IN STD_LOGIC;
+		    SCLR : IN STD_LOGIC;
+		    Q : OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
+		  );
+	end component SynchTDL;
+
 
 	component TermDecoder is
 		port (
@@ -112,13 +113,6 @@ package TDC_pkg is
 	    );
 	end component ThermoDecoderTDL;
 
-	--component CoinDetector is
-	--	  Port ( 
-	--	  		iDetector : in std_logic_vector((2*VDL_LENGTH-3) downto 0);
-	--	  		iReset	  : in std_logic;
-	--	  		oEN 	  : out std_logic
-	--	  	);
-	--end component CoinDetector;
 
 	component FifoVDL is
 		port (
@@ -137,10 +131,10 @@ package TDC_pkg is
 		port (
 			clk : IN STD_LOGIC;
 			rst : IN STD_LOGIC;
-			din : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+			din : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
 			wr_en : IN STD_LOGIC;
 			rd_en : IN STD_LOGIC;
-			dout : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+			dout : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
 			full : OUT STD_LOGIC;
 			empty : OUT STD_LOGIC
 		);
@@ -164,25 +158,26 @@ package TDC_pkg is
 			data_out	: out std_logic;
 			tx_ready	: out std_logic;
 			start 		: in std_logic;
-			data_in		: in std_logic_vector(4 downto 0);
+			data_in		: in std_logic_vector(5 downto 0);
 			reset 		: in std_logic;
-			clk 		: in std_logic
+			clk 		: in std_logic;
+			oRstCtrl	: out std_logic
 		);
 	end component tUart;
 
 	component MuxUart is
     Port ( 
     	   iFifoVDL  : in STD_LOGIC_VECTOR (4 downto 0);
-           iFifoTDL  : in STD_LOGIC_VECTOR (4 downto 0);
+           iFifoTDL  : in STD_LOGIC_VECTOR (5 downto 0);
            iSel 	 : in STD_LOGIC;
-           oUartData : out STD_LOGIC_VECTOR (4 downto 0)
+           oUartData : out STD_LOGIC_VECTOR (5 downto 0)
           );
 	end component MuxUart;
 
 	component UartModule is
 	  generic (
 	  		VDL_DATA : integer := 5;
-	  		TDL_DATA : integer := 5
+	  		TDL_DATA : integer := 6
 	  	);
 	  Port (iVDL 		: in std_logic_vector(VDL_DATA-1 downto 0);
 	  		iTDL 		: in std_logic_vector(TDL_DATA-1 downto 0);

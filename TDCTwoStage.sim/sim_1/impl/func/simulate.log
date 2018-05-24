@@ -1,8 +1,14 @@
 Vivado Simulator 2017.1
 Time resolution is 1 ps
 Failure: end of simulation
-Time: 112500 ps  Iteration: 0  Process: /TDC_tb/P_STIM  File: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd
-$finish called at time : 112500 ps : File "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd" Line 86
+Time: 1011 ns  Iteration: 0  Process: /UartModule_tb/P_SIM  File: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/UartModule_tb.vhd
+$finish called at time : 1011 ns : File "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/UartModule_tb.vhd" Line 121
 Failure: end of simulation
-Time: 112500 ps  Iteration: 0  Process: /TDC_tb/P_STIM  File: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd
-$finish called at time : 112500 ps : File "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd" Line 86
+Time: 1011 ns  Iteration: 0  Process: /UartModule_tb/P_SIM  File: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/UartModule_tb.vhd
+$finish called at time : 1011 ns : File "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/UartModule_tb.vhd" Line 121
+Failure: end of simulation
+Time: 1011 ns  Iteration: 0  Process: /UartModule_tb/P_SIM  File: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/UartModule_tb.vhd
+$finish called at time : 1011 ns : File "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/UartModule_tb.vhd" Line 121
+Failure: end of simulation
+Time: 1011 ns  Iteration: 0  Process: /UartModule_tb/P_SIM  File: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/UartModule_tb.vhd
+$finish called at time : 1011 ns : File "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/UartModule_tb.vhd" Line 121

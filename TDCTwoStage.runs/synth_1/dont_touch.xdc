@@ -3,8 +3,8 @@
 
 # XDC: new/constraints.xdc
 
+# IP: ip/FifoTDL/FifoTDL.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==FifoTDL || ORIG_REF_NAME==FifoTDL}]
+
 # IP: ip/FifoVDL/FifoVDL.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==FifoVDL || ORIG_REF_NAME==FifoVDL}]
-
-# IP: ip/ShiftRegister/ShiftRegister.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ShiftRegister || ORIG_REF_NAME==ShiftRegister}]

@@ -1,0 +1,1 @@
+SynchTDL.vhd,vhdl,xil_defaultlib,../../../../TDCTwoStage.srcs/sources_1/ip/SynchTDL/sim/SynchTDL.vhd,

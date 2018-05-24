@@ -1,24 +1,64 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.sim/sim_1/synth/func/tUART_sim_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.sim/sim_1/synth/func/UartModule_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Control
+INFO: [VRFC 10-307] analyzing entity MuxUart
 INFO: [VRFC 10-307] analyzing entity tUART
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__blk_mem_gen_prim_wrapper\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__rd_bin_cntr\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__rd_status_flags_ss\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__synchronizer_ff\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__synchronizer_ff_0\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__synchronizer_ff_1\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__synchronizer_ff_2\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__wr_bin_cntr\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__wr_status_flags_ss\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__blk_mem_gen_prim_wrapper\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__rd_bin_cntr\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__rd_status_flags_ss\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__synchronizer_ff\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__synchronizer_ff_0\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__synchronizer_ff_1\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__synchronizer_ff_2\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__wr_bin_cntr\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__wr_status_flags_ss\
+INFO: [VRFC 10-307] analyzing entity SynchTDL_c_reg_fd_v12_0_3_viv
+INFO: [VRFC 10-307] analyzing entity SynchVDL_c_reg_fd_v12_0_3_viv
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__blk_mem_gen_prim_width\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__rd_logic\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__reset_blk_ramfifo\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__wr_logic\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__blk_mem_gen_prim_width\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__rd_logic\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__reset_blk_ramfifo\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__wr_logic\
+INFO: [VRFC 10-307] analyzing entity SynchTDL_c_shift_ram_v12_0_10_legacy
+INFO: [VRFC 10-307] analyzing entity SynchVDL_c_shift_ram_v12_0_10_legacy
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__blk_mem_gen_generic_cstr\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__blk_mem_gen_generic_cstr\
+INFO: [VRFC 10-307] analyzing entity SynchTDL_c_shift_ram_v12_0_10_viv
+INFO: [VRFC 10-307] analyzing entity SynchVDL_c_shift_ram_v12_0_10_viv
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__blk_mem_gen_top\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__blk_mem_gen_top\
+INFO: [VRFC 10-307] analyzing entity SynchTDL_c_shift_ram_v12_0_10
+INFO: [VRFC 10-307] analyzing entity SynchVDL_c_shift_ram_v12_0_10
+INFO: [VRFC 10-307] analyzing entity SynchTDL
+INFO: [VRFC 10-307] analyzing entity SynchVDL
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__blk_mem_gen_v8_3_6_synth\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__blk_mem_gen_v8_3_6_synth\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__blk_mem_gen_v8_3_6\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__blk_mem_gen_v8_3_6\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__memory\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__memory\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__fifo_generator_ramfifo\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__fifo_generator_ramfifo\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__fifo_generator_top\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__fifo_generator_top\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__fifo_generator_v13_1_4_synth\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__fifo_generator_v13_1_4_synth\
+INFO: [VRFC 10-307] analyzing entity \FifoTDL__fifo_generator_v13_1_4\
+INFO: [VRFC 10-307] analyzing entity \FifoVDL__fifo_generator_v13_1_4\
+INFO: [VRFC 10-307] analyzing entity FifoTDL
+INFO: [VRFC 10-307] analyzing entity FifoVDL
+INFO: [VRFC 10-307] analyzing entity UartModule
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/imports/new/TDC_pkg.vhd" into library xil_defaultlib
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/VDL_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity VDL_tb
-ERROR: [VRFC 10-149] 'vdl' is not compiled in library xil_defaultlib [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/VDL_tb.vhd:86]
-ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/VDL_tb.vhd:40]
-INFO: [VRFC 10-240] VHDL file /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/VDL_tb.vhd ignored due to errors
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity TDC_tb
-ERROR: [VRFC 10-149] 'tdc' is not compiled in library xil_defaultlib [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd:79]
-ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd:39]
-INFO: [VRFC 10-240] VHDL file /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd ignored due to errors
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/ThermoTDL_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ThermoTDL_tb
-ERROR: [VRFC 10-149] 'thermodecodertdl' is not compiled in library xil_defaultlib [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/ThermoTDL_tb.vhd:103]
-ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/ThermoTDL_tb.vhd:41]
-INFO: [VRFC 10-240] VHDL file /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/ThermoTDL_tb.vhd ignored due to errors
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/ThermoVDL_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDL_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/Mux_exp_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity Mux_exp_tb
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/tUART_sim.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity tUART_sim
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/UartModule_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity UartModule_tb

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Wed May 23 19:54:55 2018
+# Process ID: 11885
+# Current directory: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/SynchVDL_synth_1
+# Command line: vivado -log SynchVDL.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SynchVDL.tcl
+# Log file: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/SynchVDL_synth_1/SynchVDL.vds
+# Journal file: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/SynchVDL_synth_1/vivado.jou
+#-----------------------------------------------------------
+source SynchVDL.tcl -notrace

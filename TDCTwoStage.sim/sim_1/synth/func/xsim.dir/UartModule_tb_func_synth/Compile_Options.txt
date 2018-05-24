@@ -1,0 +1,1 @@
+-wto "7ca1ca23962d498595c817b5be870ee7" --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "UartModule_tb_func_synth" "xil_defaultlib.UartModule_tb" -log "elaborate.log" 
