@@ -42,6 +42,7 @@ entity Control is
     	iVDLEmpty	: in std_logic;
     	iTDLFull 	: in std_logic;
     	iTDLEmpty	: in std_logic;
+    	iReady 		: in std_logic_vector(0 downto 0);
     	iTxReady	: in std_logic;
     	oSelMux		: out std_logic:='1'; 
     	oWrEnVDL	: out std_logic:='0';
@@ -55,7 +56,7 @@ end Control;
 
 architecture Behavioral of Control is
 
-	type ControlState is (stInit, stWrite, stReadVDL, stReadTDL, stEndTx);
+	type ControlState is (stInit, stReady, stWrite, stReadVDL, stReadTDL, stEndTx);
 
 	type reg_type is record
 		state 		: ControlState;
@@ -85,7 +86,7 @@ begin
 			r.selMux 		<= '1';
 			r.startTx 		<= '0';
 			r.state       	<= stInit;
-			r.reset 		<= '0';
+			r.reset 		<= '0';		
 		elsif rising_edge(iClk) then
 			r <= rin;			
 		end if;
@@ -94,7 +95,7 @@ begin
 	end process P_SEQ;
 
 
-	P_COMB: process(iVDLFull, iTDLFull, iTDLEmpty, iVDLEmpty, iTxReady, r)
+	P_COMB: process(iVDLFull, iTDLFull, iReady, iTDLEmpty, iVDLEmpty, iTxReady, r)
 		variable v 		: reg_type;
 		variable i 		: reg_type;
 		variable j		: reg_type;
@@ -115,13 +116,19 @@ begin
 
 		case (r.state) is
 			when stInit =>
+				if iReady(0) = '1' then
+					v.state := stReady;
+				else
+					v.state := stInit;	
+				end if;
+			when stReady =>
 				if (iVDLEmpty = '1' and iTDLEmpty = '1') then
 					v.WrEnVDL := '1';
 					v.WrEnTDL := '1';
 					v.i := '0';
 					v.state := stWrite;
 				else
-					v.state := stInit;
+					v.state := stReady;
 				end if;
 			when stWrite =>					-- filling fifos wr = 1
 				--waitCycle := waitCycle + 1;

@@ -1,6 +1,14 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.sim/sim_1/impl/func/UartModule_tb_func_impl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.sim/sim_1/impl/func/TDC_tb_func_impl.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity Control
 INFO: [VRFC 10-307] analyzing entity MuxUart
+INFO: [VRFC 10-307] analyzing entity Mux_exp
+INFO: [VRFC 10-307] analyzing entity SynchTDL
+INFO: [VRFC 10-307] analyzing entity SynchVDL
+INFO: [VRFC 10-307] analyzing entity TDL
+INFO: [VRFC 10-307] analyzing entity TermDecoder
+INFO: [VRFC 10-307] analyzing entity ThermoDecoderTDL
+INFO: [VRFC 10-307] analyzing entity VDL
+INFO: [VRFC 10-307] analyzing entity clk_wiz_0_clk_wiz_0_clk_wiz
 INFO: [VRFC 10-307] analyzing entity tUART
 INFO: [VRFC 10-307] analyzing entity \FifoTDL__blk_mem_gen_prim_wrapper\
 INFO: [VRFC 10-307] analyzing entity \FifoTDL__rd_bin_cntr\
@@ -20,6 +28,7 @@ INFO: [VRFC 10-307] analyzing entity \FifoVDL__synchronizer_ff_1\
 INFO: [VRFC 10-307] analyzing entity \FifoVDL__synchronizer_ff_2\
 INFO: [VRFC 10-307] analyzing entity \FifoVDL__wr_bin_cntr\
 INFO: [VRFC 10-307] analyzing entity \FifoVDL__wr_status_flags_ss\
+INFO: [VRFC 10-307] analyzing entity clk_wiz_0
 INFO: [VRFC 10-307] analyzing entity \FifoTDL__blk_mem_gen_prim_width\
 INFO: [VRFC 10-307] analyzing entity \FifoTDL__rd_logic\
 INFO: [VRFC 10-307] analyzing entity \FifoTDL__reset_blk_ramfifo\
@@ -49,6 +58,11 @@ INFO: [VRFC 10-307] analyzing entity \FifoVDL__fifo_generator_v13_1_4\
 INFO: [VRFC 10-307] analyzing entity FifoTDL
 INFO: [VRFC 10-307] analyzing entity FifoVDL
 INFO: [VRFC 10-307] analyzing entity UartModule
+INFO: [VRFC 10-307] analyzing entity TDC
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/imports/new/TDC_pkg.vhd" into library xil_defaultlib
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/UartModule_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity UartModule_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TDC_tb
+ERROR: [VRFC 10-719] formal port/generic <clk> is not declared in <tdc> [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd:294]
+ERROR: [VRFC 10-704] formal clk_in1_n has no actual or default value [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd:292]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd:39]
+INFO: [VRFC 10-240] VHDL file /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sim_1/new/TDC_tb.vhd ignored due to errors

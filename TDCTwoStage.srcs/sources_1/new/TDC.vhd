@@ -40,16 +40,17 @@ entity TDC is
 	--	VDLLength : integer :=32
 	--);
     Port (
-    	--clk_in1_n	: in std_logic;
-    	--clk_in1_p	: in std_logic;
-    	Clk 		: in std_logic;
+    	clk_in1_n	: in std_logic;
+    	clk_in1_p	: in std_logic;
+    	--Clk 		: in std_logic;
     	iStart 		: in std_logic;
     	iStop		: in std_logic;
     	iReset		: in std_logic;
-    	--oTx			: out std_logic
+    	oLockedClk	: out std_logic;	
+    	oTx			: out std_logic
     	-- decoder outputs
-    	oVDL		: out std_logic_vector(4 downto 0); 
-    	oTDL		: out std_logic_vector(5 downto 0)	
+    	--oVDL		: out std_logic_vector(4 downto 0); 
+    	--oTDL		: out std_logic_vector(5 downto 0)	
     );
 
 	attribute io_buffer_type : string;
@@ -68,7 +69,8 @@ architecture Behavioral of TDC is
 	signal oStop  : std_logic;
 
 	-- clock
-	--signal Clk : std_logic;
+	signal Clk : std_logic;
+	signal sim : std_logic;
 
 	--VDL signals
 	signal oVDLData 	: std_logic_vector(VDL_LENGTH-1 downto 0);
@@ -101,6 +103,7 @@ architecture Behavioral of TDC is
 
 	-- Uart signal
 	signal oUartData : std_logic;
+	signal oTDCReset : std_logic;
  
 	-- attrubutes
 
@@ -127,41 +130,40 @@ architecture Behavioral of TDC is
 begin
 	
 	-- input registers
-		REG_ST : FDRE
+		REG_ST : FDCE
 		generic map (
 			INIT => '0') -- Initial value of register ('0' or '1')
 		port map (
 			Q => oStart, -- Data output
 			C => iStart, -- Clock input
 			CE => '1', -- Clock enable input
-			R => iReset, -- Synchronous reset input
+			CLR => oTDCReset, -- aSynchronous reset input
 			D => '1' -- Data input
 		);
-		REG_SP : FDRE
+		REG_SP : FDCE
 		generic map (
 			INIT => '0') -- Initial value of register ('0' or '1')
 		port map (
 			Q => oStop, -- Data output
 			C => iStop, -- Clock input
 			CE => '1', -- Clock enable input
-			R => iReset, -- Synchronous reset input
+			CLR => oTDCReset, -- aSynchronous reset input
 			D => '1' -- Data input
 		);
 
-	-- MUX input registers
+	-- TDC Reset for statisctical measurements
 
-	--MUX_REG: for i in 0 to (2*VDL_LENGTH-3) generate
-	--	REG_cmp : FDRE
-	--	generic map (
-	--		INIT => '0') -- Initial value of register ('0' or '1')
-	--	port map (
-	--		Q => oMuxReg(i), -- Data output
-	--		C => iMuxData(i), -- Clock input
-	--		CE => '1', -- Clock enable input
-	--		R => iReset, -- Synchronous reset input
-	--		D => '1' -- Data input
-	--	);
-	--end generate;
+	--TDC_RST: process(oStop, Clk)
+
+	--	if (oStart = '1') then
+
+	--	end if;
+
+	--	if i = 2 then
+
+	--	end if;
+	--end process;
+
 
 	--Mux out conversion to std_logic
 
@@ -170,14 +172,15 @@ begin
 
 	--Components 
 
-	--Clk_cmp: clk_wiz_0 port map (
-	--	clk_out1 	=> Clk,
-	--	reset 	  	=> iReset,
-	--	clk_in1_p	=> clk_in1_p,
-	--	clk_in1_n	=> clk_in1_n
-	--);
+	Clk_cmp: clk_wiz_0 port map (
+		locked      => oLockedClk,
+		clk_out1 	=> Clk,
+		reset 	  	=> iReset,
+		clk_in1_p	=> clk_in1_p,
+		clk_in1_n	=> clk_in1_n
+	);
 
-	--SRDelayLines_cmp: SRDelayLines port map(
+	--SRDelayLines_cmp: SRDelayLines port map( 
 	--		iClk 	 => Clk,
 	--		iReset	 => iReset,
 	--		iSRDelay => iSRDelay,
@@ -187,7 +190,7 @@ begin
 	VDL_cmp: VDL port map(
 			iLatch 	=> oStart,
 	  		iLut	=> oStop,
-	  		iReset  => iReset,
+	  		iReset  => oTDCReset,
 	  		oData   => oVDLData,			
 	  		oVDL    => iMuxData	  		
 		);
@@ -209,14 +212,14 @@ begin
 	TDL_cmp: TDL port map(
 			iClk	=>  oMuxStop,
 			iTaps	=>  oMuxStart,
-			iReset	=>	iReset, 
+			iReset	=>	oTDCReset, 
 			oData	=>	oTDLData
 		);
 
 	ThermoDecoderTDL_cmp: ThermoDecoderTDL port map(
 			iData => oTDLData,
 			oData => oTDLDecoder
-		);
+		); 
 
 	--CoinDetector_cmp: CoinDetector port map(
 	--		iDetector => iMuxData,
@@ -224,19 +227,20 @@ begin
 	--		oEN 	  => oENSignal
 	--		);
 		
-	--UartModule_cmp: UartModule port map(
-	--		iVDL		=> oVDLDecoder,
-	--		iTDL		=> oTDLDecoder,
-	--		clk_in1_p	=> clk_in1_p,
-	--		clk_in1_n	=> clk_in1_n,
-	--		iReset		=> iReset,
-	--		oTx 		=> oUartData
-	--	);
+	UartModule_cmp: UartModule port map( 
+			iVDL		=> oVDLDecoder,
+			iTDL		=> oTDLDecoder,
+			iClk		=> Clk,
+			iReady		=> oVDLData(0 downto 0),
+			iReset		=> iReset,
+			oTDCReset   => oTDCReset,
+			oTx 		=> oUartData
+		);
 
-	--oTx <= oUartData;
+	oTx <= oUartData;
 	
-	oVDL <= oVDLDecoder;
-	oTDL <= oTDLDecoder;
+	--oVDL <= oVDLDecoder;
+	--oTDL <= oTDLDecoder;
 	--oEN <= oENSignal;
 
 end Behavioral;

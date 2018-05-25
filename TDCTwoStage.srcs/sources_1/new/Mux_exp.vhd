@@ -41,6 +41,9 @@ entity Mux_exp is
      --iEN  : in std_logic;
      oMux : out std_logic_vector(1 downto 0)
     );
+
+    --attribute clock_buffer_type : string;
+	--attribute clock_buffer_type of oMux(1 downto 0) : signal is "bufr";
 end Mux_exp;
 
 

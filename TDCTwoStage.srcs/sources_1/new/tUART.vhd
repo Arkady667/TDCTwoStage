@@ -13,8 +13,8 @@ port (
 	start 		: in std_logic;
 	data_in		: in std_logic_vector(5 downto 0);
 	reset 		: in std_logic;
-	clk 		: in std_logic;
-	oRstCtrl	: out std_logic
+	clk 		: in std_logic
+	--oRstCtrl	: out std_logic
 	);
 end tUART;
 
@@ -62,8 +62,9 @@ begin
 		if rising_edge(clk) then
 			if(reset = '1') then --bylo 0!!!!!!!!!!!! jaby co
 				state <= init;
-				oRstCtrl <= '1';
+				--oRstCtrl <= '1';
 			else
+				--oRstCtrl <= '0';
 				state <= nxt_state;
 			end if;
 		end if;

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1761-2" LaunchTime="1527109291">
-  <File Type="VDS-TIMING-PB" Name="UartModule_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="UartModule_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="UartModule.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="UartModule_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="UartModule_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="UartModule_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="UartModule.vds"/>
-  <File Type="PA-TCL" Name="UartModule.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1761-2" LaunchTime="1527257318">
+  <File Type="VDS-TIMING-PB" Name="TDC_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="TDC_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="TDC.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="TDC_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="TDC_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="TDC_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="TDC.vds"/>
+  <File Type="PA-TCL" Name="TDC.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/TDC_pkg.vhd">
@@ -119,20 +119,32 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/SynchTDL.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SynchVDL.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="UartModule"/>
+      <Option Name="TopModule" Val="TDC"/>
     </Config>
   </FileSet>
-  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_2">
-    <File Path="$PSRCDIR/constrs_2/new/constraints.xdc">
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_3">
+    <File Path="$PSRCDIR/constrs_3/new/constraints.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_2/new/constraints.xdc"/>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_3/new/constraints.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -140,7 +152,5 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="SynchTDL"/>
-  <BlockFileSet Type="BlockSrcs" Name="SynchVDL"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
 </GenRun>

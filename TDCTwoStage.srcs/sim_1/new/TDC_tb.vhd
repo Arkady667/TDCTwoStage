@@ -42,9 +42,10 @@ architecture Behavioral of TDC_tb is
 	signal iStart 		:  std_logic;
 	signal iStop		:  std_logic;
 	signal iReset		:  std_logic;
+	signal oTx 			:  std_logic;
 	-- decoder outputs
-	signal oVDL			:  std_logic_vector(4 downto 0); 
-	signal oTDL			:  std_logic_vector(5 downto 0);
+	--signal oVDL			:  std_logic_vector(4 downto 0); 
+	--signal oTDL			:  std_logic_vector(5 downto 0);
 
 	constant PERIOD : integer := 10; 
 
@@ -59,31 +60,231 @@ begin
     end process;
 
 	P_STIM: process 
+			variable TI : integer := 1;
 		begin
 		     --init
 		    iReset <= '0';
 		    iStart <= '0';
 	        iStop <= '0';
-	        wait for 2 ns;
-	        
-	        --Start
-	        iStart <= '1';
-	        
-	        --Stop
-	        wait for 1.5 ns;  --TI
-	        iStop <= '1';
+	        wait for 1 us;
 
-	        --Reset
-	        wait for 10 ns;
+	        	wait for 7 ns;
+
+	        	-- Od START do rozpoczecia kolejnego pomiaru ma minąć 10ns !
+
+		        --Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+		        --Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+	        	--Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+	        	--Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+	        	--Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+	        	--Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+	        	--Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+	        	--Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+	        	--Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+	        	--Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+	        	--Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+	        	--Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+	        	--Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+	        	--Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+	        	--Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+	        	--Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+	        	--Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+	        	--Start
+		        iStart <= '1';
+		        --Stop
+		        wait for 1 ns;  --TI
+		        iStop <= '1';
+		        wait for 8 ns;
+		        iStart <= '0';
+	        	iStop <= '0';
+	        	wait for 1 ns;
+	        	--iReset <= '1';
+
+
+
+	        
 	        --iReset <= '1';
-	        wait for 70 ns;
-	        iReset <= '1';
-	       	
+	        wait for 3 ms;
+			iReset <= '1';
+			wait for 1 ms;
+			--iReset <= '0';
+			--wait for 1 ms;
+		       	
 		    
 	        --end
-	        wait for 30 ns;
+	        --wait for 30 ns;
 	        
-			assert false report "end of simulation" severity failure;
+			--assert false report "end of simulation" severity failure;
 
 	end process;
 
@@ -94,8 +295,9 @@ begin
 			iStart 	=> iStart,
 			iStop	=> iStop,
 			iReset 	=> iReset,
-			oVDL	=> oVDL,
-			oTDL	=> oTDL
+			oTx		=> oTx
+			--oVDL	=> oVDL,
+			--oTDL	=> oTDL
 		);
 
 end Behavioral;

@@ -43,7 +43,9 @@ entity UartModule is
   		iVDL 		: in std_logic_vector(VDL_DATA-1 downto 0):="00000";
   		iTDL 		: in std_logic_vector(TDL_DATA-1 downto 0):="000000";
         iClk 		: in std_logic;
+        iReady 		: in std_logic_vector(0 downto 0);
         iReset		: in std_logic;
+        oTDCReset	: out std_logic; 
   		oTx  		: out std_logic
   		);
 end UartModule;
@@ -135,7 +137,8 @@ begin
 			D 	 	=> iTDLData,
 			CLK 	=> iClk,
 			SCLR	=> ControlReset,
-			Q 		=> oSynchTDL
+			Q 		=> oSynchTDL,
+			oReset  => oTDCReset
 		);
 
 
@@ -168,8 +171,8 @@ begin
 			start 		=> startTx, -- control
 			data_in		=> iUartData,
 			reset 		=> ControlReset,
-			clk 		=> iClk,
-			oRstCtrl	=> RstCtrl
+			clk 		=> iClk
+			--oRstCtrl	=> RstCtrl
 
 		);	
 
@@ -183,11 +186,12 @@ begin
 
 	Control_cmp: Control port map(
 			iClk		=> iClk,
-	    	iRst		=> RstCtrl, 
+	    	iRst		=> iReset, 
 	    	iVDLFull 	=> VDLFull,
 	    	iVDLEmpty	=> VDLEmpty,
 	    	iTDLFull 	=> TDLFull,
 	    	iTDLEmpty	=> TDLEmpty,
+	    	iReady 		=> iReady,
 	    	iTxReady	=> txReady,
 	    	oSelMux		=> iSelect,
 	    	oWrEnVDL	=> WrEnVDL,

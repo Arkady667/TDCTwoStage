@@ -149,14 +149,14 @@ begin
 	end generate;
 
 	OUT_REG: for i in 0 to (2*VDL_LENGTH-3) generate
-		REG_cmp : FDPE
+		REG_cmp : LDCE
 		generic map (
 			INIT => '0') -- Initial value of register ('0' or '1')
 		port map (
 			Q => oMerged(i), -- Data output
-			C => '1', -- Clock input
-			CE => '1', -- Clock enable input
-			PRE => merged(i), -- Synchronous reset input
+			G => merged(i), -- Clock input
+			GE => '1', -- Clock enable input
+			CLR => iReset, -- aSynchronous reset input
 			D => '1' -- Data input
 		);
 	end generate;

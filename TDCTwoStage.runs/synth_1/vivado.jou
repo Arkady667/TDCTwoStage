@@ -2,11 +2,11 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Wed May 23 23:01:31 2018
-# Process ID: 20216
+# Start of session at: Fri May 25 16:08:39 2018
+# Process ID: 3571
 # Current directory: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/synth_1
-# Command line: vivado -log UartModule.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source UartModule.tcl
-# Log file: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/synth_1/UartModule.vds
+# Command line: vivado -log TDC.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TDC.tcl
+# Log file: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/synth_1/TDC.vds
 # Journal file: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source UartModule.tcl -notrace
+source TDC.tcl -notrace

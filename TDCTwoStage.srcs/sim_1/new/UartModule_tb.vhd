@@ -46,6 +46,7 @@ architecture Behavioral of UartModule_tb is
 	signal iVDL 		: std_logic_vector(VDL_DATA-1 downto 0):="00000";
   	signal iTDL 		: std_logic_vector(TDL_DATA-1 downto 0):="000000";
     signal iClk		 	: std_logic;
+    signal iReady		: std_logic;
     --signal clk_in1_n 	: std_logic;
     signal iReset		: std_logic;
   	signal oTx  		: std_logic;
@@ -101,9 +102,10 @@ begin
 	begin
 		--init
 		--iReset <= '1';
-		wait for 5 ns;
+		--wait for 0.5 ms;
 		iVDL <= "00000";
 		iTDL <= "000000";
+		iReady <= '1';
 		iReset <= '0';
 		wait for 10 ns;
 
@@ -112,15 +114,18 @@ begin
 		for i in 1 to 20 loop 
 			VDLFifoData(iDataVDL, i);
 			iVDL <= iDataVDL;
+			--wait for 2 ns;
 			TDLFifoData(iDataTDL, i); -- +1
 			iTDL <= iDataTDL;
-			wait for 10 ns;
+			wait for 10 ns;	-- co tyle nowy pomiar (10 ns)
 		end loop;
 
 		wait for 3 ms;
-		--iReset <= '1';
-
-		wait for 0.3 ms;
+		iReset <= '1';
+		iReady <= '0';
+		wait for 1 ms;
+		iReset <= '0';
+		wait for 1 ms;
 		--sim := sim + 1;
 
 		--if (sim = 2) then		
@@ -138,6 +143,7 @@ begin
 			iVDL		=> iVDL,
 			iTDL		=> iTDL,
 			iClk		=> iClk,
+			iReady  	=> iReady,
 			iReset		=> iReset,
 			oTx 		=> oTx
 		);

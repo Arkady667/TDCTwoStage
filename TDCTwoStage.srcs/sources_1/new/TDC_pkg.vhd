@@ -76,7 +76,8 @@ package TDC_pkg is
 		    D : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
 		    CLK : IN STD_LOGIC;
 		    SCLR : IN STD_LOGIC;
-		    Q : OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
+		    Q : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+		    oReset : out std_logic
 		  );
 	end component SynchTDL;
 
@@ -142,6 +143,7 @@ package TDC_pkg is
 
 	component clk_wiz_0 is
 		port (
+			locked	  : out std_logic;
 	        clk_out1  : out std_logic;
             reset 	  : in std_logic;
             clk_in1_p : in std_logic;
@@ -152,7 +154,7 @@ package TDC_pkg is
 	component tUart is
 		generic (
 			baud 		: integer := 115200;
-			clk_rate	: integer := 50000000 --100MHz
+			clk_rate	: integer := 100000000 --100MHz
 		);  
 		port (
 			data_out	: out std_logic;
@@ -160,8 +162,8 @@ package TDC_pkg is
 			start 		: in std_logic;
 			data_in		: in std_logic_vector(5 downto 0);
 			reset 		: in std_logic;
-			clk 		: in std_logic;
-			oRstCtrl	: out std_logic
+			clk 		: in std_logic
+			--oRstCtrl	: out std_logic
 		);
 	end component tUart;
 
@@ -181,8 +183,11 @@ package TDC_pkg is
 	  	);
 	  Port (iVDL 		: in std_logic_vector(VDL_DATA-1 downto 0);
 	  		iTDL 		: in std_logic_vector(TDL_DATA-1 downto 0);
-	        clk_in1_p 	: in std_logic;
-	        clk_in1_n 	: in std_logic;
+	  		iClk		: in std_logic;
+	        --clk_in1_p 	: in std_logic;
+	        --clk_in1_n 	: in std_logic;
+	        iReady 		: in std_logic_vector(0 downto 0);
+	        oTDCReset	: out std_logic;
 	        iReset		: in std_logic;
 	  		oTx  		: out std_logic
 	  		);
@@ -196,6 +201,7 @@ package TDC_pkg is
 	    	iVDLEmpty	: in std_logic;
 	    	iTDLFull 	: in std_logic;
 	    	iTDLEmpty	: in std_logic;
+	    	iReady  	: in std_logic_vector(0 downto 0);
 	    	iTxReady	: in std_logic;
 	    	oSelMux		: out std_logic;
 	    	oWrEnVDL	: out std_logic;

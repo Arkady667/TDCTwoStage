@@ -82,14 +82,14 @@ begin
     end generate;
 
     REG_TAPS: for j in 0 to 4*LENGTH-1 generate
-		REG : FDRE
+		REG : FDCE
 		generic map (
 			INIT => '0') -- Initial value of register ('0' or '1')
 		port map (
 			Q => registerOutput(j), -- Data output
 			C => iClk, -- Clock input
 			CE => '1', -- Clock enable input
-			R => iReset, -- Synchronous reset input
+			CLR => iReset, -- asynchronous reset input
 			D => taps(j) -- Data input
 		);
 	end generate;

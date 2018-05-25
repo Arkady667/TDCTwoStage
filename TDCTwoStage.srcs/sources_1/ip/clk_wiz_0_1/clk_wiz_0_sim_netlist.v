@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
-// Date        : Wed May 16 14:50:14 2018
+// Date        : Fri May 25 15:54:50 2018
 // Host        : hal running 64-bit Ubuntu 16.04.4 LTS
 // Command     : write_verilog -force -mode funcsim {/home/arkady/Documents/Vivado
 //               Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0_sim_netlist.v}

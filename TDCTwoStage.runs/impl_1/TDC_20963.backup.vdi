@@ -1,0 +1,1030 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Fri May 25 11:31:42 2018
+# Process ID: 20963
+# Current directory: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/impl_1
+# Command line: vivado -log TDC.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source TDC.tcl -notrace
+# Log file: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/impl_1/TDC.vdi
+# Journal file: /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source TDC.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint '/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/FifoTDL/FifoTDL.dcp' for cell 'UartModule_cmp/FifoTDL_cmp'
+INFO: [Project 1-454] Reading design checkpoint '/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/FifoVDL/FifoVDL.dcp' for cell 'UartModule_cmp/FifoVDL_cmp'
+INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.1
+INFO: [Device 21-403] Loading part xc7vx485tffg1761-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/FifoTDL/FifoTDL.xdc] for cell 'UartModule_cmp/FifoTDL_cmp/U0'
+Finished Parsing XDC File [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/FifoTDL/FifoTDL.xdc] for cell 'UartModule_cmp/FifoTDL_cmp/U0'
+Parsing XDC File [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/FifoVDL/FifoVDL.xdc] for cell 'UartModule_cmp/FifoVDL_cmp/U0'
+Finished Parsing XDC File [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/FifoVDL/FifoVDL.xdc] for cell 'UartModule_cmp/FifoVDL_cmp/U0'
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'clk_wiz_0'. The XDC file /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'clk_wiz_0'. The XDC file /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc will not be read for any cell of this module.
+Parsing XDC File [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirInClk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:56]
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[0].LATCH_init.LATCH_first/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:82]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-514] set_max_delay: Path segmentation by forcing 'Mux_exp_cmp/oMux[0]_INST_0/O' to be timing endpoint. There will be no hold timing paths to this pin unless set_min_delay is used to constrain the paths. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:82]
+Resolution: Use valid endpoint to avoid path segmentation such as the data pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[10].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[11].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[12].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[13].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[14].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[15].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[16].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[17].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[18].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[19].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[1].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[20].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[21].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[22].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[23].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[24].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[25].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[26].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[27].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[28].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[29].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[2].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[30].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[31].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[3].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[4].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[5].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[6].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[7].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[8].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[9].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-514] set_max_delay: Path segmentation by forcing 'Mux_exp_cmp/oMux[1]_INST_0/O' to be timing endpoint. There will be no hold timing paths to this pin unless set_min_delay is used to constrain the paths. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:84]
+Resolution: Use valid endpoint to avoid path segmentation such as the data pin of a register.
+Finished Parsing XDC File [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+link_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1531.398 ; gain = 440.859 ; free physical = 1237 ; free virtual = 9451
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx485t-ffg1761'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx485t-ffg1761'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+Command: report_drc (run_mandatory_drcs) for: opt_checks
+INFO: [DRC 23-27] Running DRC with 4 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.56 . Memory (MB): peak = 1593.418 ; gain = 53.016 ; free physical = 1231 ; free virtual = 9445
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirInClk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:56]
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[0].LATCH_init.LATCH_first/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:82]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-514] set_max_delay: Path segmentation by forcing 'Mux_exp_cmp/oMux[0]_INST_0/O' to be timing endpoint. There will be no hold timing paths to this pin unless set_min_delay is used to constrain the paths. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:82]
+Resolution: Use valid endpoint to avoid path segmentation such as the data pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[10].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[11].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[12].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[13].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[14].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[15].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[16].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[17].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[18].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[19].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[1].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[20].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[21].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[22].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[23].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[24].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[25].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[26].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[27].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[28].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[29].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[2].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[30].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[31].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[3].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[4].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[5].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[6].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[7].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[8].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[9].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-514] set_max_delay: Path segmentation by forcing 'Mux_exp_cmp/oMux[1]_INST_0/O' to be timing endpoint. There will be no hold timing paths to this pin unless set_min_delay is used to constrain the paths. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:84]
+Resolution: Use valid endpoint to avoid path segmentation such as the data pin of a register.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1cf705c89
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2145.160 ; gain = 0.000 ; free physical = 751 ; free virtual = 8965
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 11 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 2655d21da
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2145.160 ; gain = 0.000 ; free physical = 751 ; free virtual = 8965
+INFO: [Opt 31-389] Phase Constant propagation created 1 cells and removed 1 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 2113c720d
+
+Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2145.160 ; gain = 0.000 ; free physical = 751 ; free virtual = 8965
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG Mux_exp_cmp/oMux[1]_BUFG_inst to drive 64 load(s) on clock net iClk
+INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
+Phase 4 BUFG optimization | Checksum: 241097b40
+
+Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2145.160 ; gain = 0.000 ; free physical = 751 ; free virtual = 8965
+INFO: [Opt 31-389] Phase BUFG optimization created 1 cells and removed 0 cells
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 241097b40
+
+Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2145.160 ; gain = 0.000 ; free physical = 751 ; free virtual = 8965
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2145.160 ; gain = 0.000 ; free physical = 751 ; free virtual = 8965
+Ending Logic Optimization Task | Checksum: 241097b40
+
+Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2145.160 ; gain = 0.000 ; free physical = 751 ; free virtual = 8965
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirInClk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:56]
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[0].LATCH_init.LATCH_first/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:82]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-514] set_max_delay: Path segmentation by forcing 'Mux_exp_cmp/oMux[0]_INST_0/O' to be timing endpoint. There will be no hold timing paths to this pin unless set_min_delay is used to constrain the paths. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:82]
+Resolution: Use valid endpoint to avoid path segmentation such as the data pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[10].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[11].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[12].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[13].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[14].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[15].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[16].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[17].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[18].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[19].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[1].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[20].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[21].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[22].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[23].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[24].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[25].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[26].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[27].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[28].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[29].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[2].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[30].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[31].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[3].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[4].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[5].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[6].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[7].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[8].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[9].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-514] set_max_delay: Path segmentation by forcing 'Mux_exp_cmp/oMux[1]_INST_0/O' to be timing endpoint. There will be no hold timing paths to this pin unless set_min_delay is used to constrain the paths. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:84]
+Resolution: Use valid endpoint to avoid path segmentation such as the data pin of a register.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 2 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 4
+Ending PowerOpt Patch Enables Task | Checksum: 18d382b69
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 743 ; free virtual = 8958
+Ending Power Optimization Task | Checksum: 18d382b69
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2289.199 ; gain = 144.039 ; free physical = 746 ; free virtual = 8960
+33 Infos, 0 Warnings, 104 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2289.199 ; gain = 757.801 ; free physical = 746 ; free virtual = 8960
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 743 ; free virtual = 8960
+INFO: [Common 17-1381] The checkpoint '/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/impl_1/TDC_opt.dcp' has been generated.
+Command: report_drc -file TDC_drc_opted.rpt
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/impl_1/TDC_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Chipscope 16-241] No debug cores found in the current design.
+Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
+or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx485t-ffg1761'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx485t-ffg1761'
+Command: report_drc (run_mandatory_drcs) for: incr_eco_checks
+INFO: [DRC 23-27] Running DRC with 4 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+Command: report_drc (run_mandatory_drcs) for: placer_checks
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
+WARNING: [DRC CKLD-2] Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads: Clock net iStart_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): iStart_IBUF_inst/O
+WARNING: [DRC CKLD-2] Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads: Clock net iStop_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): iStop_IBUF_inst/O
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ADDRARDADDR[5] (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/gc0.count_d1_reg[3][0]) which is driven by a register (UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ADDRARDADDR[6] (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/gc0.count_d1_reg[3][1]) which is driven by a register (UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ADDRARDADDR[7] (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/gc0.count_d1_reg[3][2]) which is driven by a register (UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ADDRARDADDR[8] (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/gc0.count_d1_reg[3][3]) which is driven by a register (UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ADDRBWRADDR[5] (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/Q[0]) which is driven by a register (UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ADDRBWRADDR[6] (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/Q[1]) which is driven by a register (UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ADDRBWRADDR[7] (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/Q[2]) which is driven by a register (UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ADDRBWRADDR[8] (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/Q[3]) which is driven by a register (UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/tmp_ram_rd_en) which is driven by a register (UartModule_cmp/Control_cmp/r_reg[RdEnTDL]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/tmp_ram_rd_en) which is driven by a register (UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/tmp_ram_rd_en) which is driven by a register (UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (UartModule_cmp/Control_cmp/r_reg[wrEnTDL]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/RSTRAMARSTRAM (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/out[0]) which is driven by a register (UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[1] (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (UartModule_cmp/Control_cmp/r_reg[wrEnTDL]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[1] (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[2] (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (UartModule_cmp/Control_cmp/r_reg[wrEnTDL]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[2] (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[3] (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (UartModule_cmp/Control_cmp/r_reg[wrEnTDL]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[3] (net: UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 23 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 734 ; free virtual = 8949
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: fbb47f1a
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 734 ; free virtual = 8949
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirInClk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:56]
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[0].LATCH_init.LATCH_first/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:82]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-514] set_max_delay: Path segmentation by forcing 'Mux_exp_cmp/oMux[0]_INST_0/O' to be timing endpoint. There will be no hold timing paths to this pin unless set_min_delay is used to constrain the paths. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:82]
+Resolution: Use valid endpoint to avoid path segmentation such as the data pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[10].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[11].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[12].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[13].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[14].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[15].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[16].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[17].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[18].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[19].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[1].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[20].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[21].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[22].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[23].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[24].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[25].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[26].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[27].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[28].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[29].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[2].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[30].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[31].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[3].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[4].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[5].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[6].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[7].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[8].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[9].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-514] set_max_delay: Path segmentation by forcing 'Mux_exp_cmp/oMux[1]_INST_0/O' to be timing endpoint. There will be no hold timing paths to this pin unless set_min_delay is used to constrain the paths. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:84]
+Resolution: Use valid endpoint to avoid path segmentation such as the data pin of a register.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 733 ; free virtual = 8948
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirInClk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:56]
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[0].LATCH_init.LATCH_first/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:82]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-514] set_max_delay: Path segmentation by forcing 'Mux_exp_cmp/oMux[0]_INST_0/O' to be timing endpoint. There will be no hold timing paths to this pin unless set_min_delay is used to constrain the paths. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:82]
+Resolution: Use valid endpoint to avoid path segmentation such as the data pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[10].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[11].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[12].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[13].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[14].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[15].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[16].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[17].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[18].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[19].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[1].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[20].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[21].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[22].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[23].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[24].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[25].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[26].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[27].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[28].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[29].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[2].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[30].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[31].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[3].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[4].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[5].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[6].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[7].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[8].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[9].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-514] set_max_delay: Path segmentation by forcing 'Mux_exp_cmp/oMux[1]_INST_0/O' to be timing endpoint. There will be no hold timing paths to this pin unless set_min_delay is used to constrain the paths. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:84]
+Resolution: Use valid endpoint to avoid path segmentation such as the data pin of a register.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: bfce53cb
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 722 ; free virtual = 8937
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 18bfad0d1
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 718 ; free virtual = 8933
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 18bfad0d1
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 718 ; free virtual = 8933
+Phase 1 Placer Initialization | Checksum: 18bfad0d1
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 718 ; free virtual = 8933
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 275db8aa1
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 684 ; free virtual = 8899
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 275db8aa1
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 684 ; free virtual = 8899
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1f6089e43
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 680 ; free virtual = 8895
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1d9737641
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 679 ; free virtual = 8894
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1d9737641
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 679 ; free virtual = 8894
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 298bbbafc
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 679 ; free virtual = 8894
+
+Phase 3.6 Small Shape Detail Placement
+
+Phase 3.6.1 Place Remaining
+Phase 3.6.1 Place Remaining | Checksum: 1b85523b9
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 671 ; free virtual = 8887
+Phase 3.6 Small Shape Detail Placement | Checksum: 1b85523b9
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 671 ; free virtual = 8886
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: cecdacc1
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 671 ; free virtual = 8886
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: cecdacc1
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 671 ; free virtual = 8886
+Phase 3 Detail Placement | Checksum: cecdacc1
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 671 ; free virtual = 8886
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirInClk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:56]
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[0].LATCH_init.LATCH_first/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:82]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-514] set_max_delay: Path segmentation by forcing 'Mux_exp_cmp/oMux[0]_INST_0/O' to be timing endpoint. There will be no hold timing paths to this pin unless set_min_delay is used to constrain the paths. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:82]
+Resolution: Use valid endpoint to avoid path segmentation such as the data pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[10].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[11].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[12].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[13].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[14].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[15].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[16].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[17].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[18].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[19].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[1].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[20].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[21].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[22].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[23].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[24].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[25].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[26].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[27].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[28].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[29].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[2].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[30].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[31].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[3].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[4].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[5].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[6].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[7].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[8].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[9].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-514] set_max_delay: Path segmentation by forcing 'Mux_exp_cmp/oMux[1]_INST_0/O' to be timing endpoint. There will be no hold timing paths to this pin unless set_min_delay is used to constrain the paths. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:84]
+Resolution: Use valid endpoint to avoid path segmentation such as the data pin of a register.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 11719f499
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+INFO: [Place 46-41] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 11719f499
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 671 ; free virtual = 8886
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.492. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1e63d22b6
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 671 ; free virtual = 8886
+Phase 4.1 Post Commit Optimization | Checksum: 1e63d22b6
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 671 ; free virtual = 8886
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1e63d22b6
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 682 ; free virtual = 8897
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 1e63d22b6
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 682 ; free virtual = 8897
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 1ff079816
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 682 ; free virtual = 8897
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1ff079816
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 682 ; free virtual = 8897
+Ending Placer Task | Checksum: 1a1cc034c
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 727 ; free virtual = 8943
+55 Infos, 23 Warnings, 206 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 727 ; free virtual = 8943
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.27 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 724 ; free virtual = 8943
+INFO: [Common 17-1381] The checkpoint '/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/impl_1/TDC_placed.dcp' has been generated.
+report_io: Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.48 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 692 ; free virtual = 8909
+report_utilization: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.23 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 721 ; free virtual = 8938
+report_control_sets: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2289.199 ; gain = 0.000 ; free physical = 725 ; free virtual = 8942
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx485t-ffg1761'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx485t-ffg1761'
+Running DRC as a precondition to command route_design
+Command: report_drc (run_mandatory_drcs) for: router_checks
+INFO: [DRC 23-27] Running DRC with 4 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+Checksum: PlaceDB: c26016b8 ConstDB: 0 ShapeSum: df6bec94 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: e147e4d3
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:37 . Memory (MB): peak = 2595.152 ; gain = 305.953 ; free physical = 355 ; free virtual = 8582
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: e147e4d3
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:37 . Memory (MB): peak = 2595.152 ; gain = 305.953 ; free physical = 355 ; free virtual = 8582
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: e147e4d3
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:37 . Memory (MB): peak = 2595.152 ; gain = 305.953 ; free physical = 327 ; free virtual = 8554
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: e147e4d3
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:37 . Memory (MB): peak = 2595.152 ; gain = 305.953 ; free physical = 327 ; free virtual = 8554
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 25206b009
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:40 . Memory (MB): peak = 2686.863 ; gain = 397.664 ; free physical = 337 ; free virtual = 8541
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.535  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 2 Router Initialization | Checksum: 19127b0a1
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:40 . Memory (MB): peak = 2686.863 ; gain = 397.664 ; free physical = 333 ; free virtual = 8536
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1b40e1a36
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:41 . Memory (MB): peak = 2686.863 ; gain = 397.664 ; free physical = 322 ; free virtual = 8531
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 34
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.450  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1df284fc4
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:41 . Memory (MB): peak = 2686.863 ; gain = 397.664 ; free physical = 312 ; free virtual = 8521
+Phase 4 Rip-up And Reroute | Checksum: 1df284fc4
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:41 . Memory (MB): peak = 2686.863 ; gain = 397.664 ; free physical = 301 ; free virtual = 8509
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 1df284fc4
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:41 . Memory (MB): peak = 2686.863 ; gain = 397.664 ; free physical = 320 ; free virtual = 8529
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1df284fc4
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:41 . Memory (MB): peak = 2686.863 ; gain = 397.664 ; free physical = 320 ; free virtual = 8529
+Phase 5 Delay and Skew Optimization | Checksum: 1df284fc4
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:41 . Memory (MB): peak = 2686.863 ; gain = 397.664 ; free physical = 320 ; free virtual = 8529
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1df284fc4
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:42 . Memory (MB): peak = 2686.863 ; gain = 397.664 ; free physical = 320 ; free virtual = 8528
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.450  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1df284fc4
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:42 . Memory (MB): peak = 2686.863 ; gain = 397.664 ; free physical = 320 ; free virtual = 8528
+Phase 6 Post Hold Fix | Checksum: 1df284fc4
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:42 . Memory (MB): peak = 2686.863 ; gain = 397.664 ; free physical = 320 ; free virtual = 8528
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.0230315 %
+  Global Horizontal Routing Utilization  = 0.0186662 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 21f3b6fb0
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:42 . Memory (MB): peak = 2686.863 ; gain = 397.664 ; free physical = 318 ; free virtual = 8526
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 21f3b6fb0
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:42 . Memory (MB): peak = 2686.863 ; gain = 397.664 ; free physical = 317 ; free virtual = 8525
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 21627ecfd
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:42 . Memory (MB): peak = 2686.863 ; gain = 397.664 ; free physical = 317 ; free virtual = 8525
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.450  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 21627ecfd
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:42 . Memory (MB): peak = 2686.863 ; gain = 397.664 ; free physical = 320 ; free virtual = 8528
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:42 . Memory (MB): peak = 2686.863 ; gain = 397.664 ; free physical = 361 ; free virtual = 8570
+
+Routing Is Done.
+67 Infos, 23 Warnings, 206 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:18 ; elapsed = 00:00:43 . Memory (MB): peak = 2720.812 ; gain = 431.613 ; free physical = 361 ; free virtual = 8570
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2720.812 ; gain = 0.000 ; free physical = 357 ; free virtual = 8569
+INFO: [Common 17-1381] The checkpoint '/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/impl_1/TDC_routed.dcp' has been generated.
+Command: report_drc -file TDC_drc_routed.rpt -pb TDC_drc_routed.pb -rpx TDC_drc_routed.rpx
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/impl_1/TDC_drc_routed.rpt.
+report_drc completed successfully
+Command: report_methodology -file TDC_methodology_drc_routed.rpt -rpx TDC_methodology_drc_routed.rpx
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirInClk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:56]
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[0].LATCH_init.LATCH_first/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:82]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-514] set_max_delay: Path segmentation by forcing 'Mux_exp_cmp/oMux[0]_INST_0/O' to be timing endpoint. There will be no hold timing paths to this pin unless set_min_delay is used to constrain the paths. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:82]
+Resolution: Use valid endpoint to avoid path segmentation such as the data pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[10].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[11].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[12].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[13].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[14].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[15].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[16].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[17].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[18].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[19].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[1].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[20].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[21].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[22].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[23].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[24].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[25].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[26].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[27].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[28].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[29].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[2].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[30].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[31].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[3].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[4].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[5].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[6].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[7].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[8].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[9].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-514] set_max_delay: Path segmentation by forcing 'Mux_exp_cmp/oMux[1]_INST_0/O' to be timing endpoint. There will be no hold timing paths to this pin unless set_min_delay is used to constrain the paths. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:84]
+Resolution: Use valid endpoint to avoid path segmentation such as the data pin of a register.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 4 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.runs/impl_1/TDC_methodology_drc_routed.rpt.
+report_methodology completed successfully
+Command: report_power -file TDC_power_routed.rpt -pb TDC_power_summary_routed.pb -rpx TDC_power_routed.rpx
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VirInClk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:56]
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[0].LATCH_init.LATCH_first/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:82]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-514] set_max_delay: Path segmentation by forcing 'Mux_exp_cmp/oMux[0]_INST_0/O' to be timing endpoint. There will be no hold timing paths to this pin unless set_min_delay is used to constrain the paths. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:82]
+Resolution: Use valid endpoint to avoid path segmentation such as the data pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[10].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[11].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[12].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[13].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[14].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[15].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[16].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[17].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[18].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[19].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[1].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[20].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[21].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[22].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[23].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[24].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[25].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[26].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[27].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[28].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[29].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[2].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[30].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[31].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[3].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[4].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[5].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[6].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[7].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[8].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'VDL_cmp/LATCH_TAPS[9].LATCH_next.LATCH/Q' to be timing startpoint. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:83]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+CRITICAL WARNING: [Constraints 18-514] set_max_delay: Path segmentation by forcing 'Mux_exp_cmp/oMux[1]_INST_0/O' to be timing endpoint. There will be no hold timing paths to this pin unless set_min_delay is used to constrain the paths. [/home/arkady/Documents/Vivado Projects/TDCTwoStage/TDCTwoStage.srcs/constrs_3/new/constraints.xdc:84]
+Resolution: Use valid endpoint to avoid path segmentation such as the data pin of a register.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+76 Infos, 23 Warnings, 274 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Common 17-206] Exiting Vivado at Fri May 25 11:33:25 2018...

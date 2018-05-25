@@ -40,6 +40,7 @@ entity ThermoDecoderTDL is
 		OUTPUTS: integer := 6
 	);
   	Port ( 
+  		--iClk  : in std_logic;
   		iData : in std_logic_vector(INPUTS-1 downto 0);
   		oData : out std_logic_vector(OUTPUTS-1 downto 0)
     );
@@ -106,5 +107,14 @@ begin
 			oData <= bin1;
 		end if;
 	end process;
+
+	--PROC5: process(iData,iClk)
+	--begin
+	--	if (rising_ed)
+	--		if (iData /= "000000") then
+	--			oResetTDC <= '1';
+	--		end if;
+	--	end if;
+	--end process;
 
 end Behavioral;

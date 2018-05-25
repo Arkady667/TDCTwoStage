@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
-| Date         : Tue May 22 20:33:42 2018
+| Date         : Fri May 25 16:10:33 2018
 | Host         : hal running 64-bit Ubuntu 16.04.4 LTS
 | Command      : report_control_sets -verbose -file TDC_control_sets_placed.rpt
 | Design       : TDC
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    99 |
-| Unused register locations in slices containing registers |   679 |
+| Number of unique control sets                            |   125 |
+| Unused register locations in slices containing registers |   797 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,130 +33,163 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               9 |            4 |
-| No           | No                    | Yes                    |              62 |           62 |
-| No           | Yes                   | No                     |              98 |           50 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| No           | No                    | No                     |              27 |           13 |
+| No           | No                    | Yes                    |             120 |           39 |
+| No           | Yes                   | No                     |              98 |           95 |
+| Yes          | No                    | No                     |               6 |            2 |
+| Yes          | No                    | Yes                    |              38 |            9 |
+| Yes          | Yes                   | No                     |              26 |            8 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------------+---------------+--------------------+------------------+----------------+
-|          Clock Signal          | Enable Signal |  Set/Reset Signal  | Slice Load Count | Bel Load Count |
-+--------------------------------+---------------+--------------------+------------------+----------------+
-|                                |               | VDL_cmp/merged[11] |                1 |              1 |
-| ~VDL_cmp/merged[42]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[40]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[38]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[36]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[34]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[22]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[32]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[28]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[16]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[18]            |               | iReset_IBUF        |                1 |              1 |
-|                                |               | VDL_cmp/merged[12] |                1 |              1 |
-| ~VDL_cmp/merged[44]            |               | iReset_IBUF        |                1 |              1 |
-|                                |               | VDL_cmp/merged[10] |                1 |              1 |
-|                                |               | VDL_cmp/merged[8]  |                1 |              1 |
-|                                |               | VDL_cmp/merged[7]  |                1 |              1 |
-|                                |               | VDL_cmp/merged[9]  |                1 |              1 |
-|                                |               | VDL_cmp/merged[1]  |                1 |              1 |
-|                                |               | VDL_cmp/merged[0]  |                1 |              1 |
-|                                |               | VDL_cmp/merged[25] |                1 |              1 |
-|                                |               | VDL_cmp/merged[24] |                1 |              1 |
-|                                |               | VDL_cmp/merged[21] |                1 |              1 |
-|                                |               | VDL_cmp/merged[20] |                1 |              1 |
-|                                |               | VDL_cmp/merged[18] |                1 |              1 |
-| ~VDL_cmp/merged[14]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[12]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[10]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[8]             |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[0]             |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[24]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[20]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[2]             |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[6]             |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[30]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[26]            |               | iReset_IBUF        |                1 |              1 |
-|  iStop_IBUF                    |               | iReset_IBUF        |                1 |              1 |
-|                                |               | VDL_cmp/merged[15] |                1 |              1 |
-| ~VDL_cmp/merged[4]             |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/luts_31               |               | iReset_IBUF        |                1 |              1 |
-|  iStart_IBUF                   |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[60]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[58]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[50]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[48]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[46]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[56]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[54]            |               | iReset_IBUF        |                1 |              1 |
-| ~VDL_cmp/merged[52]            |               | iReset_IBUF        |                1 |              1 |
-|                                |               | VDL_cmp/merged[36] |                1 |              1 |
-|                                |               | VDL_cmp/merged[53] |                1 |              1 |
-|                                |               | VDL_cmp/merged[52] |                1 |              1 |
-|                                |               | VDL_cmp/merged[45] |                1 |              1 |
-|                                |               | VDL_cmp/merged[44] |                1 |              1 |
-|                                |               | VDL_cmp/merged[43] |                1 |              1 |
-|                                |               | VDL_cmp/merged[42] |                1 |              1 |
-|                                |               | VDL_cmp/merged[41] |                1 |              1 |
-|                                |               | VDL_cmp/merged[51] |                1 |              1 |
-|                                |               | VDL_cmp/merged[40] |                1 |              1 |
-|                                |               | VDL_cmp/merged[39] |                1 |              1 |
-|                                |               | VDL_cmp/merged[38] |                1 |              1 |
-|                                |               | VDL_cmp/merged[37] |                1 |              1 |
-|                                |               | VDL_cmp/merged[54] |                1 |              1 |
-|                                |               | VDL_cmp/merged[35] |                1 |              1 |
-|                                |               | VDL_cmp/merged[34] |                1 |              1 |
-|                                |               | VDL_cmp/merged[33] |                1 |              1 |
-|                                |               | VDL_cmp/merged[19] |                1 |              1 |
-|                                |               | VDL_cmp/merged[23] |                1 |              1 |
-|                                |               | VDL_cmp/merged[22] |                1 |              1 |
-|                                |               | VDL_cmp/merged[31] |                1 |              1 |
-|                                |               | VDL_cmp/merged[32] |                1 |              1 |
-|                                |               | VDL_cmp/merged[29] |                1 |              1 |
-|                                |               | VDL_cmp/merged[28] |                1 |              1 |
-|                                |               | VDL_cmp/merged[17] |                1 |              1 |
-|                                |               | VDL_cmp/merged[16] |                1 |              1 |
-|                                |               | VDL_cmp/merged[58] |                1 |              1 |
-|                                |               | VDL_cmp/merged[6]  |                1 |              1 |
-|                                |               | VDL_cmp/merged[5]  |                1 |              1 |
-|                                |               | VDL_cmp/merged[30] |                1 |              1 |
-|                                |               | VDL_cmp/merged[27] |                1 |              1 |
-|                                |               | VDL_cmp/merged[26] |                1 |              1 |
-|                                |               | VDL_cmp/merged[14] |                1 |              1 |
-|                                |               | VDL_cmp/merged[13] |                1 |              1 |
-|                                |               | VDL_cmp/merged[3]  |                1 |              1 |
-|                                |               | VDL_cmp/merged[4]  |                1 |              1 |
-|                                |               | VDL_cmp/merged[61] |                1 |              1 |
-|                                |               | VDL_cmp/merged[60] |                1 |              1 |
-|                                |               | VDL_cmp/merged[59] |                1 |              1 |
-|                                |               | VDL_cmp/merged[2]  |                1 |              1 |
-|                                |               | VDL_cmp/merged[57] |                1 |              1 |
-|                                |               | VDL_cmp/merged[50] |                1 |              1 |
-|                                |               | VDL_cmp/merged[49] |                1 |              1 |
-|                                |               | VDL_cmp/merged[48] |                1 |              1 |
-|                                |               | VDL_cmp/merged[47] |                1 |              1 |
-|                                |               | VDL_cmp/merged[46] |                1 |              1 |
-|                                |               | VDL_cmp/merged[56] |                1 |              1 |
-|                                |               | VDL_cmp/merged[55] |                1 |              1 |
-|  TermDecoder_VDL_cmp/oData[4]  |               |                    |                2 |              4 |
-|  ThermoDecoderTDL_cmp/oData[5] |               |                    |                2 |              5 |
-|  Mux_exp_cmp/oMux_BUFG[0]      |               | iReset_IBUF        |               16 |             64 |
-+--------------------------------+---------------+--------------------+------------------+----------------+
++--------------------------------------------------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|                   Clock Signal                   |                                              Enable Signal                                              |                                                            Set/Reset Signal                                                           | Slice Load Count | Bel Load Count |
++--------------------------------------------------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+| ~VDL_cmp/luts_31                                 |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[16]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[16]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[15]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[14]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[14]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[44]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[44]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[13]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[12]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[12]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[0]                               |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[0]                               |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[17]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[51]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[49]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[1]                               |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[50]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[50]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[30]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[30]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[34]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[34]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[5]                               |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[43]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[42]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[8]                               |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  Clk_cmp/inst/clk_out1                           |                                                                                                         | UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rst_rd_reg2                                                    |                1 |              1 |
+|  Clk_cmp/inst/clk_out1                           |                                                                                                         | UartModule_cmp/FifoVDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rst_rd_reg2                                                    |                1 |              1 |
+|  Clk_cmp/inst/clk_out1                           |                                                                                                         | UartModule_cmp/SynchTDL_cmp/oReset_i_2_n_0                                                                                            |                1 |              1 |
+| ~VDL_cmp/merged[22]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[22]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[54]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[54]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[53]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[29]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[28]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[28]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[21]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[7]                               |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[8]                               |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[6]                               |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[6]                               |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[27]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[26]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[26]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  UartModule_cmp/Uart_cmp/delay_clock_reg_i_2_n_0 |                                                                                                         |                                                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[4]                               |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[4]                               |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[19]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[18]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[18]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[57]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[56]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[56]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[55]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[48]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[48]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[25]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[11]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[40]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[40]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[61]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[58]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[58]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[42]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[45]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[60]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[60]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[59]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[9]                               |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[39]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[38]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[38]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[36]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[36]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[41]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[35]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[2]                               |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[37]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[20]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[20]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  iStop_IBUF                                      |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  iStart_IBUF                                     |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[47]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[46]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[46]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[32]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[32]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[31]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[52]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[33]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[24]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[24]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[23]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[10]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[10]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[52]                              |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  VDL_cmp/merged[3]                               |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+| ~VDL_cmp/merged[2]                               |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |                1 |              1 |
+|  Clk_cmp/inst/clk_out1                           |                                                                                                         | UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rst_d2                                                         |                1 |              2 |
+|  Clk_cmp/inst/clk_out1                           |                                                                                                         | UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2]                                                  |                1 |              2 |
+|  Clk_cmp/inst/clk_out1                           |                                                                                                         | UartModule_cmp/FifoVDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rst_d2                                                         |                1 |              2 |
+|  Clk_cmp/inst/clk_out1                           |                                                                                                         | UartModule_cmp/FifoVDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2]                                                  |                1 |              2 |
+|  Clk_cmp/inst/clk_out1                           |                                                                                                         | UartModule_cmp/FifoVDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/AS[0] |                1 |              3 |
+|  Clk_cmp/inst/clk_out1                           |                                                                                                         | UartModule_cmp/FifoVDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/AS[0] |                1 |              3 |
+|  Clk_cmp/inst/clk_out1                           |                                                                                                         | UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/AS[0] |                1 |              3 |
+|  Clk_cmp/inst/clk_out1                           |                                                                                                         | UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/AS[0] |                1 |              3 |
+|  TermDecoder_VDL_cmp/oData[4]                    |                                                                                                         |                                                                                                                                       |                3 |              4 |
+|  Clk_cmp/inst/clk_out1                           | UartModule_cmp/Uart_cmp/number_bits[3]_i_1_n_0                                                          | UartModule_cmp/Control_cmp/oReset                                                                                                     |                1 |              4 |
+|  Clk_cmp/inst/clk_out1                           |                                                                                                         | UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rst_wr_reg2                                                    |                2 |              4 |
+|  Clk_cmp/inst/clk_out1                           |                                                                                                         | UartModule_cmp/FifoVDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rst_wr_reg2                                                    |                2 |              4 |
+|  ThermoDecoderTDL_cmp/oData[5]                   |                                                                                                         |                                                                                                                                       |                3 |              5 |
+|  Clk_cmp/inst/clk_out1                           | UartModule_cmp/SynchTDL_cmp/Q0                                                                          | UartModule_cmp/Control_cmp/oReset                                                                                                     |                1 |              6 |
+|  Clk_cmp/inst/clk_out1                           | UartModule_cmp/Uart_cmp/data_reg                                                                        |                                                                                                                                       |                2 |              6 |
+|  Clk_cmp/inst/clk_out1                           | UartModule_cmp/FifoVDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0] | UartModule_cmp/FifoVDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[1]                                                  |                2 |              8 |
+|  Clk_cmp/inst/clk_out1                           | UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0] | UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[1]                                                  |                2 |              8 |
+|  Clk_cmp/inst/clk_out1                           | UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0] | UartModule_cmp/FifoTDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2]                                                  |                2 |              8 |
+|  Clk_cmp/inst/clk_out1                           | UartModule_cmp/FifoVDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0] | UartModule_cmp/FifoVDL_cmp/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2]                                                  |                2 |              8 |
+|  Clk_cmp/inst/clk_out1                           | UartModule_cmp/Uart_cmp/clk_counter[9]_i_2_n_0                                                          | UartModule_cmp/Uart_cmp/shift_data0                                                                                                   |                3 |              9 |
+|  Clk_cmp/inst/clk_out1                           |                                                                                                         | iReset_IBUF                                                                                                                           |                4 |             10 |
+|  Clk_cmp/inst/clk_out1                           | UartModule_cmp/Uart_cmp/clk_delay_counter0                                                              | UartModule_cmp/Uart_cmp/tx_ready0                                                                                                     |                4 |             13 |
+|  Clk_cmp/inst/clk_out1                           |                                                                                                         | UartModule_cmp/Control_cmp/oReset                                                                                                     |                3 |             17 |
+|  Clk_cmp/inst/clk_out1                           |                                                                                                         |                                                                                                                                       |                6 |             17 |
+|  Mux_exp_cmp/oMux_BUFG[1]                        |                                                                                                         | UartModule_cmp/SynchTDL_cmp/CLR                                                                                                       |               16 |             64 |
++--------------------------------------------------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
 
 
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
-| 1      |                    96 |
-| 4      |                     1 |
+| 1      |                   100 |
+| 2      |                     4 |
+| 3      |                     4 |
+| 4      |                     4 |
 | 5      |                     1 |
-| 16+    |                     1 |
+| 6      |                     2 |
+| 8      |                     4 |
+| 9      |                     1 |
+| 10     |                     1 |
+| 13     |                     1 |
+| 16+    |                     3 |
 +--------+-----------------------+
 
 

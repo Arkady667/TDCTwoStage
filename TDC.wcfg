@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TDC_tb_func_impl.wdb" id="1">
+         <top_modules>
+            <top_module name="TDC_tb" />
+            <top_module name="tdc_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="717060000001fs"></ZoomEndTime>
+      <Cursor1Time time="717060000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="144"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject type="other" fp_name="/TDC_tb/PERIOD">
+      <obj_property name="ElementShortName">PERIOD</obj_property>
+      <obj_property name="ObjectShortName">PERIOD</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TDC_tb/Clk">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TDC_tb/iStart">
+      <obj_property name="ElementShortName">iStart</obj_property>
+      <obj_property name="ObjectShortName">iStart</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TDC_tb/iStop">
+      <obj_property name="ElementShortName">iStop</obj_property>
+      <obj_property name="ObjectShortName">iStop</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TDC_tb/iReset">
+      <obj_property name="ElementShortName">iReset</obj_property>
+      <obj_property name="ObjectShortName">iReset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TDC_tb/oTx">
+      <obj_property name="ElementShortName">oTx</obj_property>
+      <obj_property name="ObjectShortName">oTx</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group2130">
+      <obj_property name="label">UartControl</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TDC_tb/I_DUT/UartModule_cmp/Control_cmp/iVDLFull">
+         <obj_property name="ElementShortName">iVDLFull</obj_property>
+         <obj_property name="ObjectShortName">iVDLFull</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TDC_tb/I_DUT/UartModule_cmp/Control_cmp/iVDLEmpty">
+         <obj_property name="ElementShortName">iVDLEmpty</obj_property>
+         <obj_property name="ObjectShortName">iVDLEmpty</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TDC_tb/I_DUT/UartModule_cmp/Control_cmp/iTDLEmpty">
+         <obj_property name="ElementShortName">iTDLEmpty</obj_property>
+         <obj_property name="ObjectShortName">iTDLEmpty</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TDC_tb/I_DUT/UartModule_cmp/Control_cmp/iTDLFull">
+         <obj_property name="ElementShortName">iTDLFull</obj_property>
+         <obj_property name="ObjectShortName">iTDLFull</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TDC_tb/I_DUT/UartModule_cmp/Control_cmp/iReady">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">iReady[0:0]</obj_property>
+         <obj_property name="ObjectShortName">iReady[0:0]</obj_property>
+         <obj_property name="label">iReady</obj_property>
+         <wvobject type="logic" fp_name="/TDC_tb/I_DUT/UartModule_cmp/Control_cmp/iReady[0]">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+            <obj_property name="label">IReady</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TDC_tb/I_DUT/UartModule_cmp/Control_cmp/iTxReady">
+         <obj_property name="ElementShortName">iTxReady</obj_property>
+         <obj_property name="ObjectShortName">iTxReady</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TDC_tb/I_DUT/UartModule_cmp/Control_cmp/oSelMux">
+         <obj_property name="ElementShortName">oSelMux</obj_property>
+         <obj_property name="ObjectShortName">oSelMux</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TDC_tb/I_DUT/UartModule_cmp/Control_cmp/oWrEnVDL">
+         <obj_property name="ElementShortName">oWrEnVDL</obj_property>
+         <obj_property name="ObjectShortName">oWrEnVDL</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TDC_tb/I_DUT/UartModule_cmp/Control_cmp/oWrEnTDL">
+         <obj_property name="ElementShortName">oWrEnTDL</obj_property>
+         <obj_property name="ObjectShortName">oWrEnTDL</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TDC_tb/I_DUT/UartModule_cmp/Control_cmp/oRdEnVDL">
+         <obj_property name="ElementShortName">oRdEnVDL</obj_property>
+         <obj_property name="ObjectShortName">oRdEnVDL</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TDC_tb/I_DUT/UartModule_cmp/Control_cmp/oRdEnTDL">
+         <obj_property name="ElementShortName">oRdEnTDL</obj_property>
+         <obj_property name="ObjectShortName">oRdEnTDL</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TDC_tb/I_DUT/UartModule_cmp/Control_cmp/oStartTx">
+         <obj_property name="ElementShortName">oStartTx</obj_property>
+         <obj_property name="ObjectShortName">oStartTx</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TDC_tb/I_DUT/UartModule_cmp/Control_cmp/oReset">
+         <obj_property name="ElementShortName">oReset</obj_property>
+         <obj_property name="ObjectShortName">oReset</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2133">
+      <obj_property name="label">FifoTDL</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/TDC_tb/I_DUT/UartModule_cmp/FifoTDL_cmp/din">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">din[5:0]</obj_property>
+         <obj_property name="ObjectShortName">din[5:0]</obj_property>
+         <obj_property name="label">iFifoTDL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TDC_tb/I_DUT/UartModule_cmp/FifoTDL_cmp/dout">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">dout[5:0]</obj_property>
+         <obj_property name="ObjectShortName">dout[5:0]</obj_property>
+         <obj_property name="label">oFifoTDL</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2136">
+      <obj_property name="label">FifoVDL</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/TDC_tb/I_DUT/UartModule_cmp/FifoVDL_cmp/din">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">din[4:0]</obj_property>
+         <obj_property name="ObjectShortName">din[4:0]</obj_property>
+         <obj_property name="label">iFifoVDL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TDC_tb/I_DUT/UartModule_cmp/FifoVDL_cmp/dout">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">dout[4:0]</obj_property>
+         <obj_property name="ObjectShortName">dout[4:0]</obj_property>
+         <obj_property name="label">oFifoVDL</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2140">
+      <obj_property name="label">Synchronizers</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/TDC_tb/I_DUT/UartModule_cmp/SynchVDL_cmp/Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[4:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[4:0]</obj_property>
+         <obj_property name="label">oVDLSynch</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TDC_tb/I_DUT/UartModule_cmp/SynchTDL_cmp/Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[5:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[5:0]</obj_property>
+         <obj_property name="label">oTDLSynch</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TDC_tb/I_DUT/UartModule_cmp/SynchTDL_cmp/CLR">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">CLR</obj_property>
+         <obj_property name="ObjectShortName">CLR</obj_property>
+         <obj_property name="label">TDCReset</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2143">
+      <obj_property name="label">VDL</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/TDC_tb/I_DUT/VDL_cmp/oVDL">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">oVDL[61:0]</obj_property>
+         <obj_property name="ObjectShortName">oVDL[61:0]</obj_property>
+         <obj_property name="label">oVDL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TDC_tb/I_DUT/VDL_cmp/oData">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">oData[31:0]</obj_property>
+         <obj_property name="ObjectShortName">oData[31:0]</obj_property>
+         <obj_property name="label">oLatchData</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2145">
+      <obj_property name="label">TDL</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/TDC_tb/I_DUT/TDL_cmp/oData">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">oData[63:0]</obj_property>
+         <obj_property name="ObjectShortName">oData[63:0]</obj_property>
+         <obj_property name="label">oTDLData</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2149">
+      <obj_property name="label">TDCMux</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/TDC_tb/I_DUT/Mux_exp_cmp/iMux">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">iMux[61:0]</obj_property>
+         <obj_property name="ObjectShortName">iMux[61:0]</obj_property>
+         <obj_property name="label">iMux</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TDC_tb/I_DUT/Mux_exp_cmp/iSel">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">iSel[31:0]</obj_property>
+         <obj_property name="ObjectShortName">iSel[31:0]</obj_property>
+         <obj_property name="label">iSelect</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TDC_tb/I_DUT/Mux_exp_cmp/oMux">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">oMux[1:0]</obj_property>
+         <obj_property name="ObjectShortName">oMux[1:0]</obj_property>
+         <obj_property name="label">oMuxTI</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2152">
+      <obj_property name="label">T2BDecoders</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/TDC_tb/I_DUT/ThermoDecoderTDL_cmp/oData">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">oData[5:0]</obj_property>
+         <obj_property name="ObjectShortName">oData[5:0]</obj_property>
+         <obj_property name="label">oTDLData</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TDC_tb/I_DUT/TermDecoder_VDL_cmp/oData">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">oData[4:0]</obj_property>
+         <obj_property name="ObjectShortName">oData[4:0]</obj_property>
+         <obj_property name="label">oVDLData</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
